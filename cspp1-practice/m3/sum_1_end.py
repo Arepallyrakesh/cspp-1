@@ -1,11 +1,9 @@
 '''
 @author :Arepallyrakesh
-prints sum 1 end numbers
+prints sum 1 end for numbers
 '''
 S = 0
 N = 1
-while N <= 6:
+for N in range(1, 7, 1):
     S = S + N
-    N = N + 1
 print(S)
- 

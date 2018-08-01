@@ -2,10 +2,7 @@
 @author :Arepallyrakesh
 prNnts heven numbers
 '''
-N = int(input())
-i = 2
-while i <= N:
-    print(i)
-    i = i + 2
+for N in range(2, 12, 2):
+    print(N)
 print("Goodbye!")
  

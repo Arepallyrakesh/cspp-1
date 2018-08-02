@@ -8,8 +8,7 @@ For example, if s = 'azcbobobegghakl', your program should print:
 #Number of vowels: 5
 '''
 def main():
-    '''
-     Write a program that counts up the number of vowels
+    '''#Write a program that counts up the number of vowels
 contained in the string s Valid vowels are: 'a', 'e', 'i', 'o', and 'u'
     '''
     s_i = input()
@@ -20,4 +19,7 @@ contained in the string s Valid vowels are: 'a', 'e', 'i', 'o', and 'u'
         if var in "aeiou":
             co_ov += 1
     print(co_ov)
+
+if __name__ == "__main__":
+    main()
  

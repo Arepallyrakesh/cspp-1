@@ -5,4 +5,3 @@ for i in range (3):
 	while i >= 3:
 		s = s * st[i]
 		print(s)
-		

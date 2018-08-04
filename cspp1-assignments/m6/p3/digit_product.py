@@ -8,7 +8,7 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    n = (input())
+    n = abs((input()))
     la = list(str(n))
     s = 1
     for i in str(n):

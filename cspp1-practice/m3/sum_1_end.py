@@ -9,7 +9,5 @@ while N <= 6:
     N = N + 1
 print(S)
 
-for N in range(1, 7, 1):
-    S = S + N
-    print(S)
+
     

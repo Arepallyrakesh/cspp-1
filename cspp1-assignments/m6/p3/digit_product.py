@@ -11,14 +11,12 @@ def main():
     '''
     n_i = int((input()))
     if n_i >= 0:
-        
         s_a = 1
         for i in str(n_i):
             s_a = s_a * int(i)
         print(s_a)
     else:
         n_i = -(n_i)
-        
         s_a = 1
         for i in str(n_i):
             s_a = s_a * int(i)

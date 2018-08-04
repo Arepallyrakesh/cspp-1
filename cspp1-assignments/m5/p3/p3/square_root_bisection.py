@@ -20,7 +20,7 @@ def main():
     # don't change these values
     epsilon = 0.01
     # your code starts here
-    low = 0.1
+    low = 0.0
     h_v = s_i
     bi_v = (h_v + low)/2.0
     while abs(bi_v**2 - s_i) > epsilon:

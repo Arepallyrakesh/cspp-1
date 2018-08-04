@@ -10,16 +10,16 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input())
-    s_1 = 0
-    f_1 = 0
+    s_i = 0
+    f_i = 0
     for i in range(1, num+1, 1):
-        if i%3 !=0 and i%5 !=0:
+        if i%3 != 0 and i%5 != 0:
             print(i)
-        if i%3 ==0:
-            s_1 = 3*i
+        if i%3 == 0:
+            s_i = 3 * i
             print("Fizz")
         if i%5 == 0:
-            f_1 = 5*i
+            f_i = 5 * i
             print("Buzz")
 
 if __name__ == "__main__":

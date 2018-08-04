@@ -11,17 +11,17 @@ def main():
     '''
     n_i = int((input()))
     if n_i >= 0:
-        la = list(str(n_i))
-        s = 1
+        l_a = list(str(n_i))
+        s_a = 1
         for i in str(n_i):
-            s = s * int(i)
-        print(s)
+            s_a = s_a * int(i)
+        print(s_a)
     else:
         n_i = -(n_i)
-        la = list(str(n_i))
-        s = 1
+        l_a = list(str(n_i))
+        s_a = 1
         for i in str(n_i):
-            s = s * int(i)
-        print(-s)
+            s_a = s_a * int(i)
+        print(-s_a)
 if __name__ == "__main__":
     main()

@@ -9,18 +9,18 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    n = int((input()))
-    if n >= 0:
-        la = list(str(n))
+    n_i = int((input()))
+    if n_i >= 0:
+        la = list(str(n_i))
         s = 1
-        for i in str(n):
+        for i in str(n_i):
             s = s * int(i)
         print(s)
     else:
-        n = -(n)
-        la = list(str(n))
+        n_i = -(n_i)
+        la = list(str(n_i))
         s = 1
-        for i in str(n):
+        for i in str(n_i):
             s = s * int(i)
         print(-s)
 if __name__ == "__main__":

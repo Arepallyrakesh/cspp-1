@@ -12,7 +12,7 @@ def main():
     la = list(str(n))
     s = 1
     for i in str(n):
-    	s = s * int(i)
+    	s = s * abs(int(i))
     print(s)
 if __name__ == "__main__":
     main()

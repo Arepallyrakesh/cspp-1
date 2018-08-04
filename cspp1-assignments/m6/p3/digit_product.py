@@ -8,11 +8,21 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    n = (input())
-    la = list(str(n))
-    s = 1
-    for i in str(n):
-    	s = s * int(i)
-    print(s)
+    n = int((input()))
+    if n >= 0:
+    	la = list(str(n))
+    	s = 1
+    	for i in str(n):
+    		s = s * int(i)
+    	print(s)
+    else:
+    	n = -(n)
+    	la = list(str(n))
+    	s = 1
+    	for i in str(n):
+    		s = s * int(i)
+    	print(-s)
+
+
 if __name__ == "__main__":
     main()

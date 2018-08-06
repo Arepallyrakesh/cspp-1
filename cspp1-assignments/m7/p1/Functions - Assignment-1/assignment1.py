@@ -42,7 +42,7 @@ def payingDebtOffInAYear(previous_bal, annualInterestRate, monthlyPaymentRate):
     return round(i, 2)
 
 def main():
-    data = '42 0.2 0.04'#input()
+    data = input()
     data = data.split(' ')
     data = list(map(float, data))
     print(payingDebtOffInAYear(data[0],data[1],data[2]))

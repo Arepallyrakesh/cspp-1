@@ -35,8 +35,8 @@ def payingDebtOffInAYear(previous_bal, annualInterestRate, monthlyPaymentRate):
     '''
     i = 0
     for i in range(12):
-        unpaid_bal = previous_bal - monthlyPaymentRate*previous_bal
-        new_bal = unpaid_bal + (annualInterestRate/12.0)*unpaid_bal
+        unpaid_bal = previous_bal - monthlyPaymentRate * previous_bal
+        new_bal = unpaid_bal + (annualInterestRate / 12.0) * unpaid_bal
         i = new_bal
         previous_bal = i
     return round(i, 2)
@@ -45,7 +45,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print('Remaining balance:', payingDebtOffInAYear(data[0],data[1],data[2]))
+    print('Remaining balance:', payingDebtOffInAYear(data[0], data[1], data[2]))
     
 if __name__ == "__main__":
     main()

@@ -33,7 +33,7 @@ balance at the end of the year in the format:
 (Monthly interest rate x Monthly unpaid balance)
 '''
 
-def payingDebtOffInAYear(previous_bal, annual_InterestRate, monthlyPaymentRate):
+def payingDebtOffInAYear(previous_bal, annual_interestrate, monthly_paymentrate):
     '''
     Write a program to calculate the credit card balance
     after one year if a person only pays the minimum monthly payment required by the
@@ -41,8 +41,8 @@ def payingDebtOffInAYear(previous_bal, annual_InterestRate, monthlyPaymentRate):
     '''
     i = 0
     for i in range(12):
-        unpaid_bal = previous_bal - monthlyPaymentRate * previous_bal
-        new_bal = unpaid_bal + (annual_InterestRate / 12.0) * unpaid_bal
+        unpaid_bal = previous_bal - monthly_paymentrate * previous_bal
+        new_bal = unpaid_bal + (annual_interestrate / 12.0) * unpaid_bal
         i = new_bal
         previous_bal = i
     return round(i, 2)

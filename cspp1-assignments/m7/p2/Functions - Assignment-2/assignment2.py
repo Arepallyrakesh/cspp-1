@@ -23,30 +23,29 @@
 
 
 
-def paying_debt_off_ina_year(bal_bal, annual_interest_rate):
-	if bal_bal <= 0:
-		minimum_fixed = 0
-        return minimum_fixed
-    	minimum_fixed = 10
-    	month = 0
-    	monthly_interest = (annual_interest_rate)/12.0
-    	while month <= 12:
-        month += 1
+def paying_debt_off_ina_year(bal_bal, annual_interest_rate,set_min):
+    if bal_bal <= 0:
+        minimum_fixed = 0
+    return minimum_fixed
+    minimum_fixed = 10
+    month = 0
+    monthly_interest = (annual_interest_rate)/12.0
+    while month <= 12:
+        month += 1
         monthly_unpaid = bal_bal - minimum_fixed
         bal_bal = monthly_unpaid + (monthly_interest * monthly_unpaid)
         if monthly_unpaid <= 0 and month == 12:
-            return minimum_fixed
+            return minimum_fixed
         if month == 12 and monthly_unpaid > 0:
             month = 0
             minimum_fixed += 10
             bal_bal = set_min
-	
-
+    return bal_bal
+ 
 def main():
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print("Lowest Payment:", paying_debt_off_ina_year(data[0], data[1], data[0]))
-	
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print("Lowest Payment:", (paying_debt_off_ina_year(data[0], data[1], data[0])))
 if __name__== "__main__":
-	main()
+    main()

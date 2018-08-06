@@ -1,4 +1,4 @@
-''' 
+'''
 # Assignment-2 - Paying Debt off in a Year
 
 # Now write a program that calculates the minimum fixed monthly
@@ -29,9 +29,8 @@ A summary of the required math is found below:
 # Updated balance each month = (Monthly unpaid balance) +
 (Monthly interest rate x Monthly unpaid balance)
 
-''' 
-
-def paying_debt_off_ina_year(balance_p, annual_interestrate,set_min):
+'''
+def paying_debt_off_ina_year(balance_p, annual_interestrate, set_min):
     '''
     function
     '''
@@ -54,9 +53,9 @@ def paying_debt_off_ina_year(balance_p, annual_interestrate,set_min):
     return balance_p
  
 def main():
-    ''' 
+    '''
     main function
-    ''' 
+    '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))

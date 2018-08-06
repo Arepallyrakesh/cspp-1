@@ -39,7 +39,7 @@
 '''
 
 
-def payingDebtOffInAYear(balance_in, annual_interestrate):
+def paying_debtofinayear(balance_in, annual_interestrate):
     '''
     Using Bisection Search to Make the Program Faster
     '''
@@ -62,11 +62,14 @@ def payingDebtOffInAYear(balance_in, annual_interestrate):
             break
     return str(round(mon_payrate, 2))
 def main():
+    '''
+    main function
+    ''' 
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:", payingDebtOffInAYear(data[0],data[1]))
+    print("Lowest Payment:", paying_debtofinayear(data[0], data[1]))
 
 if __name__ == "__main__":
     main()

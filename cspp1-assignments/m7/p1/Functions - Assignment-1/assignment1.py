@@ -35,7 +35,8 @@ balance at the end of the year in the format:
 
 def payingDebtOffInAYear(previous_bal, annual_InterestRate, monthlyPaymentRate):
     '''
-    Write a program to calculate the credit card balance after one year if a person only pays the minimum monthly payment required by the
+    Write a program to calculate the credit card balance
+    after one year if a person only pays the minimum monthly payment required by the
     credit card company each month.
     '''
     i = 0
@@ -48,7 +49,8 @@ def payingDebtOffInAYear(previous_bal, annual_InterestRate, monthlyPaymentRate):
 
 def main():
     '''
-    Write a program to calculate the credit card balance after one year if a person only pays the minimum monthly payment required by the
+    Write a program to calculate the credit card balance
+    after one year if a person only pays the minimum monthly payment required by the
     credit card company each month.
     '''
     data = input()

@@ -80,7 +80,7 @@ def paying_debtofinayear(balance_in, annual_interestrate):
 def main():
     '''
     main function
-    ''' 
+    '''
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')

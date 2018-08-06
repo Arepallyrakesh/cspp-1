@@ -1,3 +1,5 @@
+'''
+@author : Arepallyrakesh
 # Functions - Assignment-3 - Using Bisection Search to Make the Program Faster
 
 # You'll notice that in Problem 2, your monthly payment had to be a multiple of $10. Why did we make it that way? You can try running
@@ -38,6 +40,9 @@
 
 
 def payingDebtOffInAYear(balance_in, annual_interestrate):
+    '''
+    Using Bisection Search to Make the Program Faster
+    '''
     init_balance = balance_in
     moninterest_rate = annual_interestrate/12
     low_i = init_balance/12
@@ -56,15 +61,11 @@ def payingDebtOffInAYear(balance_in, annual_interestrate):
         else:
             break
     return str(round(mon_payrate, 2))
-
-
-
 def main():
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", payingDebtOffInAYear(data[0],data[1]))
-    
-if __name__== "__main__":
+    if __name__== "__main__":
     main()

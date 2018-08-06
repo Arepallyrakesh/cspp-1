@@ -51,7 +51,7 @@ def paying_debt_off_ina_year(balance_p, annual_interestrate, set_min):
             minimum_fixed += 10
             balance_p = set_min
     return balance_p
- 
+
 def main():
     '''
     main function

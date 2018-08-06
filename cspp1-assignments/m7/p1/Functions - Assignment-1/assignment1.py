@@ -33,7 +33,7 @@ balance at the end of the year in the format:
 (Monthly interest rate x Monthly unpaid balance)
 '''
 
-def payingDebtOffInAYear(previous_bal, annual_interestrate, monthly_paymentrate):
+def paying_debt_off_in_a_year(previous_bal, annual_interestrate, monthly_paymentrate):
     '''
     Write a program to calculate the credit card balance
     after one year if a person only pays the minimum monthly payment required by the
@@ -56,6 +56,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print('Remaining balance:', payingDebtOffInAYear(data[0], data[1], data[2]))
+    print('Remaining balance:', paying_debt_off_in_a_year(data[0], data[1], data[2]))
 if __name__ == "__main__":
     main()

@@ -23,7 +23,7 @@ def main():
     Write a Python function, factorial(n), that takes in
     one number and returns the factorial of given number
     '''
-    a = input()
-    print(factorial_in(int(a)))    
+    a_in = input()
+    print(factorial_in(int(a_in)))
 if __name__ == "__main__":
     main()

@@ -15,8 +15,7 @@ def factorial_in(n_in):
     # Your code here
     if n_in == 0:
         return 1
-    else:
-        return n_in * factorial_in(n_in - 1)
+    return n_in * factorial_in(n_in - 1)
 
 def main():
     '''

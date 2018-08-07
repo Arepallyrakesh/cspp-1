@@ -23,9 +23,6 @@ def gcdIter(a, b):
     			maxm = i
     return maxm
     
-
-
-
 def main():
     data = input()
     data = data.split()

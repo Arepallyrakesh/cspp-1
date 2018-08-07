@@ -13,10 +13,10 @@ def factorial_in(n):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n == 0:
+    if n_in == 0:
         return 1
     else:
-        return n * factorial_in(n - 1)
+        return n * factorial_in(n_in - 1)
 
 def main():
     '''

@@ -7,7 +7,7 @@ and returns the factorial of given number.
 # This function takes in one number and returns one number.
 '''
 
-def factorial_in(n):
+def factorial_in(n_in):
     '''
     n is positive Integer
     returns: a positive integer, the factorial of n.

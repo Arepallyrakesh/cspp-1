@@ -15,7 +15,7 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    for i in range(len(secret_word)):
+    for i in range(len(letters_guessed)):
         j = 1
         if secret_word[i] == letters_guessed[j]:
             return True

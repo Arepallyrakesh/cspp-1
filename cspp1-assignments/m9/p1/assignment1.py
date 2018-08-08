@@ -21,7 +21,7 @@ def is_word_guessed(secret_word, letters_guessed):
         if secret_word[i] == letters_guessed[j]:            
             i = i+1
             c = c+ 1
-            if c > 2:
+            if c > 0:
                 return True
             else:
                 return False

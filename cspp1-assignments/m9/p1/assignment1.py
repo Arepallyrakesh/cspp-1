@@ -19,8 +19,8 @@ def is_word_guessed(secret_word, letters_guessed):
         j = 1
         
         if secret_word[i] >= letters_guessed[j]:            
-            i = i+1
-    return True
+            return i = i+1
+            return True
         
 
             

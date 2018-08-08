@@ -1,4 +1,5 @@
 '''
+@author : Arepallyrakesh
 Exercise: Assignment-2
 Next, implement the function getGuessedWord that takes in two parameters
 a string, secret_word, and a list of letters, letters_guessed. This function
@@ -16,15 +17,10 @@ def get_guessed_word(secret_word, letters_guessed):
     w = ""
     for i in secret_word:
         if i not in letters_guessed:
-            w = w + "_"
-           
+            w = w + "_"           
         else:
             w = w + i
-        
     return w
-
-
-
 def main():
     '''
     Main function for current assignment

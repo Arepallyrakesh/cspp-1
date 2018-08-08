@@ -23,6 +23,8 @@ def is_word_guessed(secret_word, letters_guessed):
             return True
         elif secret_word[i] != letters_guessed[j]:
             return True
+        else:
+            return False
 
             
 

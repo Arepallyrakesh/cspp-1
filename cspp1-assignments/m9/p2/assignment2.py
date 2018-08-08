@@ -20,6 +20,7 @@ def get_guessed_word(secret_word, letters_guessed):
             i = i + 1
         else:
             w = w + i
+            i = i + 1
     return w
 
 

@@ -22,7 +22,7 @@ def is_word_guessed(secret_word, letters_guessed):
             i = i+1
         #elif secret_word[i] >= letters_guessed[j]:
         #    i = i+1
-    return True
+            return True
 
             
 

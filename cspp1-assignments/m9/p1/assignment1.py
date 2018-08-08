@@ -20,9 +20,15 @@ def is_word_guessed(secret_word, letters_guessed):
         c = 0
         if secret_word[i] >= letters_guessed[j]:            
             i = i+1
-        #elif secret_word[i] >= letters_guessed[j]:
-        #    i = i+1
             return True
+        elif secret_word[i] >= letters_guessed[j]:
+            i = i+1
+            return True
+        elif secret_word[i] != letters_guessed[j]:
+            i = i + 1
+            return True
+        else:
+            return False
 
             
 

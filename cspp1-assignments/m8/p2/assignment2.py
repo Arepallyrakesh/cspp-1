@@ -15,6 +15,7 @@ def sumofdigits(n_in):
     if n_in == 0:
         return 0
     return (n_in%10) + sumofdigits(n_in//10)
+    
 def main():
     '''
     find sum of digits

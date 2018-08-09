@@ -6,7 +6,7 @@ a list of letters, letters_guessed. This function returns a string
 that is comprised of lowercase English letters - all lowercase English letters
 that are not in letters_guessed
 '''
-
+import string
 def get_available_letters(letters_guessed):
     '''
     :param letters_guessed: list, what letters have been guessed so far

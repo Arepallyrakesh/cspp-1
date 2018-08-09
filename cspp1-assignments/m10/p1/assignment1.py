@@ -14,7 +14,8 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     s_2 = ""
-    string = "abcdefghijklmnopqrstuvwxyz"
+    string = string.ascii_lowercase
+    # string = "abcdefghijklmnopqrstuvwxyz"
     for i in string:
         if i not in letters_guessed:
             s_2 = s_2 + i

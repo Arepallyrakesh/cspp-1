@@ -16,7 +16,7 @@ def how_many(aDict):
         else:
             L.append(i)
     print(L)
-    return (sum(L))
+    return (len(L))
     
 
 def main():

@@ -44,7 +44,6 @@ def create_social_network(data):
         if i not in my_dict:
             my_dict[List[i]] = List[i+1].split()
    
-        
     return my_dict
         
 def main():

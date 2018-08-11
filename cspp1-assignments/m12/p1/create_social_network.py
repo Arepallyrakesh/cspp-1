@@ -47,11 +47,13 @@ def main():
         handling testcase input and printing output
     '''
     string = ''
+    L = []
     lines = int(input())
     for i in range(lines):
         i += 1
-        string += input().split(" ")
+        string += input()
         string += '\n'
+        L = string.split(" ")
         
 
 

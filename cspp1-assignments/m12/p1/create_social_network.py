@@ -34,22 +34,17 @@ def create_social_network(data):
         if List[i] not in my_dict:
             my_dict[List[i]] = List[i+1].split(",")
     return my_dict
-        
 def main():
     '''
         handling testcase input and printing output
     '''
     string = ''
-   
     lines = int(input())
     for i in range(lines):
         i += 1
         string += input()
         string += '\n'
     print(string)
-
     print(create_social_network(string))
-
 if __name__ == "__main__":
     main()
-

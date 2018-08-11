@@ -35,12 +35,17 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     
 
-    for i in range(0,len(data), 2):
+    for i in range(0,len(data) - 1, 2):
         my_dict = {}
-    
-        if data[i] not in my_dict:
-            my_dict[data[0]] = data[1].split(",")
+        L = []
+        L = data.split("\n")
 
+        print(L)
+        if L[i]  in my_dict:
+            my_dict[L[i]] = L[i+1]
+
+   
+        
     return my_dict
         
 def main():
@@ -48,18 +53,16 @@ def main():
         handling testcase input and printing output
     '''
     string = ''
-    L = []
+   
     lines = int(input())
     for i in range(lines):
         i += 1
         string += input()
         string += '\n'
-        L = string.split()
-    print(L)
-        
+    print(string)
 
 
-    print(create_social_network(L))
+    print(create_social_network(string))
 
 if __name__ == "__main__":
     main()

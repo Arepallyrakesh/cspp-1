@@ -39,7 +39,7 @@ def create_social_network(data):
         my_dict = {}
     
         if data[i] not in my_dict:
-            my_dict[data[i]] = data[i+1].split(",")
+            my_dict[data[0]] = data[1].split(",")
 
     return my_dict
         

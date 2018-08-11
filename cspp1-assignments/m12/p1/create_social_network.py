@@ -40,10 +40,11 @@ def create_social_network(data):
     List = data.split(" follows ")
 
     print(List)
-    for i in range(0,len(List), 2):
+    for i in range(0,len(data), 2):
         if List[i] not in my_dict:
             my_dict[List[i]] = List[i+1].split(",")
    
+        
     return my_dict
         
 def main():
@@ -56,7 +57,8 @@ def main():
     for i in range(lines):
         i += 1
         string += input()
-
+        string += '\n'
+    print(string)
 
     print(create_social_network(string))
 

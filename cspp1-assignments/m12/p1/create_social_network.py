@@ -37,14 +37,12 @@ def create_social_network(data):
 
     my_dict = {}
     List = []
-    data = data.split(" follows ")
-    print(data)
-    List.append(data)
+    List = data.split("\n")
 
     print(List)
     for i in range(0,len(data), 2):
         if List[i] not in my_dict:
-            my_dict[List[i]] = List[i+1].split(" ")
+            my_dict[List[i]] = List[i+1].split(",")
    
         
     return my_dict

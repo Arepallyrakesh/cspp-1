@@ -42,7 +42,7 @@ def create_social_network(data):
     print(List)
     for i in range(0,len(List), 2):
         if i not in my_dict:
-            my_dict[List[i]] = List[i+1].split()
+            my_dict[List[i]] = List[i+1].split(",")
    
     return my_dict
         
@@ -56,7 +56,7 @@ def main():
     for i in range(lines):
         i += 1
         string += input()
-    print(string)
+
 
     print(create_social_network(string))
 

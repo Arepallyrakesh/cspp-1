@@ -57,7 +57,7 @@ def main():
     lines = int(input())
     for i in range(lines):
         i += 1
-        string += input()
+        string += input().split("followss")
         string += '\n'
     print(string)
 

@@ -33,9 +33,10 @@ def create_social_network(data):
     '''
 
     # remove the pass below and start writing your code
-    my_dict = {}
+    
 
     for i in range(0,len(Data), 2):
+        my_dict = {}
         if Data[i] not in my_dict:
             d[Data[i]] = Data[i+1].split(',')
 

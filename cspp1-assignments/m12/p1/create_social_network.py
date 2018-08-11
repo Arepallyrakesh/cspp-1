@@ -53,11 +53,11 @@ def main():
         i += 1
         string += input()
         string += '\n'
-        L = string.split(" ")
+        L = list(string)
         
 
 
-    print(create_social_network(string))
+    print(create_social_network(L))
 
 if __name__ == "__main__":
     main()

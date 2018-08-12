@@ -9,7 +9,7 @@ implement the helper calculateHandlen function,
 which can be done in under five lines of code.
 ''' 
 
-def calculateHandlen(hand):
+def calculate_handlen(hand):
     """ 
     Returns the length (number of letters) in the current hand.
     
@@ -19,22 +19,22 @@ def calculateHandlen(hand):
     # TO DO... <-- Remove this comment when you code this function
     count = 0
     for i in hand:
-    	count += hand[i]
+        count += hand[i]
     return count
 
 def main():
-	''' 
-	main function
-	''' 
-	n_input=input()
-	adict={}
-	for i in range(int(n_input)):
-		data=input()
-		l_list=data.split()
-		adict[l_list[0]]=int(l_list[1])
-	print(calculateHandlen(adict))
-		
+    ''' 
+    main function
+    ''' 
+    n_input=input()
+    a_dict={}
+    for data in range(int(n_input)):
+        data=input()
+        l_list=data.split()
+        a_dict[l_list[0]]=int(l_list[1])
+    print(calculate_handlen(a_dict))
+
 
 
 if __name__ == "__main__":
-	main()
+    main()

@@ -37,11 +37,11 @@ def is_valid_word(w_ord, h_and, word_list):
         for i in word_list:
             if i in h_and and h_and[i] > 0:
                 count += 1
-    return count == len(w_ord) 
+    return bool(count == len(w_ord))
 
 
 def main():
-    ''' 
+    '''
     main function
     '''
     w_ord = input()

@@ -34,10 +34,10 @@ def is_valid_word(w_ord, h_and, word_list):
     # TO DO ... <-- Remove this comment when you code this function
     count = 0
     if w_ord in word_list:
-        for i in word_list:
+        for i in w_ord:
             if i in h_and and h_and[i] > 0:
                 count += 1
-    return bool(count == len(w_ord))
+    return count == len(w_ord)
 
 
 def main():

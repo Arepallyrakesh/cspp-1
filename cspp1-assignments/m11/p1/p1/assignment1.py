@@ -27,10 +27,10 @@ def get_word_score(word, n_l):
     # TO DO ... <-- Remove this comment when you code this function
     c_t = 0
     for i in word:
-    	c += scrabble_letter_val[i]
+    	c_t += scrabble_letter_val[i]
     if len(word) == n_l:
-    	return c * len(word) + 50
-    return c*len(word)
+    	return c_t * len(word) + 50
+    return c_t*len(word)
     
 
 

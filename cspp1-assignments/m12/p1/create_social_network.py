@@ -28,7 +28,7 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     my_dict = {}
     List = []
-    List = data.split(" follows ")
+    List = data.split("\n")
     print(List)
     for i in range(0, len(List), 2):
         if List[i] not in my_dict:

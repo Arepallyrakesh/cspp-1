@@ -11,7 +11,7 @@ word list; and it is composed entirely of letters from the current hand.
 Implement the isValidWord function.
 
 Testing: Make sure the test_isValidWord tests pass. In addition,
-you will want to test your implementation by calling it multiple 
+you will want to test your implementation by calling it multiple
 times on the same hand - what should the correct behavior be? Additionally,
 the empty string ('') is not a valid word - if you code this function correctly,
 you shouldn't need an additional check for this condition.
@@ -26,7 +26,7 @@ def is_valid_word(w_ord, h_and, word_list):
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
+
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
@@ -37,17 +37,17 @@ def is_valid_word(w_ord, h_and, word_list):
         for i in word_list:
             if i in h_and and h_and[i] > 0:
                 count += 1
-    return count == len(word_list) 
+    return count == len(w_ord) 
 
 
 def main():
     ''' 
     main function
-    ''' 
+    '''
     w_ord = input()
-    n = int(input())
+    n_input = int(input())
     a_dict = {}
-    for data in range(n):
+    for data in range(n_input):
         data = input()
         l_ist = data.split()
         a_dict[l_ist[0]] = int(l_ist[1])

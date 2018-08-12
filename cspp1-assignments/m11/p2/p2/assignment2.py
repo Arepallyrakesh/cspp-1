@@ -28,12 +28,12 @@ def main():
     '''
     Implement the updateHand function
     '''
-    n = input()
+    n_i = input()
     adict = {}
-    for i in range(int(n)):
+    for i in range(int(n_i)):
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        l_ist = data.split()
+        adict[l_ist[0]] = int(l_ist[1])
     data1 = input()
     print(updateHand(adict,data1))
 if __name__ == "__main__":

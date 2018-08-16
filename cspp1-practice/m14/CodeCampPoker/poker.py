@@ -84,16 +84,16 @@ def two_pair(hand):
             count = count + 1
     return count == 1
 
-def one_pair(hand):
-    count = 0
-    face_val4 = []
-    for i in hand:
-        face_val4.append(DATA_INPUT[i[0]])
-    face_val4.sort()
-    for k in range(len(face_val4) - 1):
-        if face_val4[k+1] - face_val4[k] == 0:
-            count = count + 1
-    return count == 0
+# def one_pair(hand):
+#     count = 0
+#     face_val4 = []
+#     for i in hand:
+#         face_val4.append(DATA_INPUT[i[0]])
+#     face_val4.sort()
+#     for k in range(len(face_val4) - 1):
+#         if face_val4[k+1] - face_val4[k] == 0:
+#             count = count + 1
+#     return count == 0
 
 
 

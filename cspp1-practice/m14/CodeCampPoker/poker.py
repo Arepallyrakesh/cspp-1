@@ -38,8 +38,8 @@ def is_flush(hand):
     '''
     suit = hand[0]
     for i in hand:
-       if suit[1] != i[1]:
-        return False
+        if suit[1] != i[1]:
+            return False
     return True
     # suit = []
     # sum_as = 0
@@ -79,7 +79,7 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     count = 0
     if is_straight(hand) and is_flush(hand):
-        count = 6 
+        count = 6
     elif is_flush(hand):
         count = 5
     elif is_straight(hand):

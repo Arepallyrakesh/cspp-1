@@ -51,6 +51,51 @@ def is_flush(hand):
     #     return True
     # return False
 
+def four_of_kind(hand):
+    count = 0
+    face_val1 = []
+    for i in hand:
+        face_val1.append(DATA_INPUT[i[0]])
+    face_val1.sort()
+    for k in range(len(face_val1) - 1):
+        if face_val1[k+1] - face_val1[k] == 0:
+            count = count + 1
+    return count == 3
+
+def three_of_kind(hand):
+    count = 0
+    face_val2 = []
+    for i in hand:
+        face_val2.append(DATA_INPUT[i[0]])
+    face_val2.sort()
+    for k in range(len(face_val2) - 1):
+        if face_val2[k+1] - face_val2[k] == 0:
+            count = count + 1
+    return count == 2
+
+def two_pair(hand):
+    count = 0
+    face_val3 = []
+    for i in hand:
+        face_val3.append(DATA_INPUT[i[0]])
+    face_val3.sort()
+    for k in range(len(face_val2) - 1):
+        if face_val3[k+1] - face_val3[k] == 0:
+            count = count + 1
+    return count == 1
+
+def one_pair(hand):
+    count = 0
+    face_val4 = []
+    for i in hand:
+        face_val4.append(DATA_INPUT[i[0]])
+    face_val4.sort()
+    for k in range(len(face_val3) - 1):
+        if face_val3[k+1] - face_val3[k] == 0:
+            count = count + 1
+    return count == 0
+
+
 
 
 def hand_rank(hand):
@@ -80,9 +125,17 @@ def hand_rank(hand):
     count = 0
     if is_straight(hand) and is_flush(hand):
         count = 6
-    elif is_flush(hand):
+    elif four_of_kind(hand):
         count = 5
+    elif is_flush(hand):
+        count = 4
     elif is_straight(hand):
+        count = 3
+    elif three_of_kind(hand):
+        count = 2
+    elif two_pair:
+        count = 1
+    else:
         count = 0
     return count
 

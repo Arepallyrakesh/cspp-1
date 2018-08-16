@@ -104,18 +104,6 @@ def two_pair(hand):
 #             count = count + 1
 #     return count == 0
 
-def full_house(hand):
-    face_val5 = []
-
-    for i in hand:
-        face_val5.append(DATA_INPUT[i[0]])
-    face_val5.sort()
-    print(face_val5)
-
-
-
-
-
 
 def hand_rank(hand):
     '''

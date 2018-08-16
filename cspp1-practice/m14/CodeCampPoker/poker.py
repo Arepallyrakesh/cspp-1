@@ -64,7 +64,7 @@ def hand_rank(hand):
         count = 6 
     elif is_flush(hand):
         count = 5
-    else is_straight(hand):
+    elif is_straight(hand):
         count = 0
     return count
 

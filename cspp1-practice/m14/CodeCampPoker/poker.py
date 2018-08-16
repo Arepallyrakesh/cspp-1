@@ -38,7 +38,7 @@ def is_flush(hand):
     '''
     suit = hand[0]
     for i in hand:
-        suit[1] != i[1]
+       if suit[1] != i[1]:
         return False
     return True
     # suit = []

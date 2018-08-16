@@ -79,7 +79,7 @@ def two_pair(hand):
     for i in hand:
         face_val3.append(DATA_INPUT[i[0]])
     face_val3.sort()
-    for k in range(len(face_val2) - 1):
+    for k in range(len(face_val3) - 1):
         if face_val3[k+1] - face_val3[k] == 0:
             count = count + 1
     return count == 1

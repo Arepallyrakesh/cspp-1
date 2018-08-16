@@ -133,7 +133,7 @@ def hand_rank(hand):
         count = 3
     elif three_of_kind(hand):
         count = 2
-    elif two_pair:
+    elif two_pair(hand):
         count = 1
     else:
         count = 0

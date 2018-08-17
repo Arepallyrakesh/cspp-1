@@ -15,10 +15,14 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    if all(True if c in '2345A' else False for c, s in hand):
-        return True
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
+    
+
+
+    # if all(True if c in '2345A' else False for c, s in hand):
+    #     return True
+    # card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    # return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
+
     # face_val = []
     # for i in hand:
     #     face_val.append(DATA_INPUT[i[0]])
@@ -92,7 +96,8 @@ def two_pair(hand):
         if face_val3[k+1] - face_val3[k] == 0:
             count = count + 1
     return count == 1
-
+'''
+one pair hand
 # def one_pair(hand):
 #     count = 0
 #     face_val4 = []
@@ -104,7 +109,7 @@ def two_pair(hand):
 #             count = count + 1
 #     return count == 0
 
-
+'''
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to

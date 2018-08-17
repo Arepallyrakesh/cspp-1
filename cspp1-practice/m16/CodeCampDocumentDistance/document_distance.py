@@ -29,7 +29,7 @@ def similarity(dict1, dict2):
     stopwords_doc = load_stopwords("stopwords.txt")
 
     for i in x:
-        if i not in spotwords_doc:
+        if i not in stopwords_doc:
             if i not in dict_1:
                 dict_1[i] = 1
             else:

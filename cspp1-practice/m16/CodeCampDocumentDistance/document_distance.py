@@ -82,8 +82,8 @@ def similarity(dict1, dict2):
     # for i in y:
     #     if i not in stopwords_doc:
     #         if i not in dict_2:
-    words_list_one = clean_given_text(text_input_one)
-    words_list_one = clean_given_text(text_input_two)
+    words_list_one = clean_given_text(dict1)
+    words_list_one = clean_given_text(dict2)
     dictionary = combine_dictionaries(dictionary_one, dictionary_two)
     return (sorted(dictionary_two), sorted(dictionary_one))
     

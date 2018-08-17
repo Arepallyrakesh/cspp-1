@@ -7,13 +7,13 @@ def combine_dictonary(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
-            dictionary[word] = [dictonary_one[word], dictonary_two[word]]
+            dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
         if word not in dictionary:
-            dictionary[word] = [dictonary_one[word], 0]
+            dictionary[word] = [dictionary_one[word], 0]
     for word in dictionary_two:
         if word not in dictionary:
-            dictionary[word] = [0, dictonary_two[word]]
+            dictionary[word] = [0, dictionary_two[word]]
     return dictionary
 
 def clean_given_text(text_input):

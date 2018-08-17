@@ -4,6 +4,9 @@
 import re
 
 def combine_dictonary(dictionary_one, dictionary_two):
+    # dictionary = {}
+    # for word in dictionary_one:
+    #     if word in dictionary_two:
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
@@ -23,20 +26,6 @@ def clean_given_text(text_input):
     return words
 
 def create_dictionary(word_list):
-    '''
-    returnns str and returns list.
-    '''
-    dictionary = {}
-    stopwords = load_stopwords("stopwords.txt")
-    for word in words_list:
-        word = word.strip()
-        if word not in stopwords and len(word) > 0:
-            if word not in dictionary:
-                dictionary[word] = 1
-            else:
-                dictionary[word] += 1
-    return dictionary
-
 
 
 def calculate_similarity(dictionary):
@@ -84,7 +73,7 @@ def similarity(dict1, dict2):
     #         if i not in dict_2:
     words_list_one = clean_given_text(text_input_one)
     words_list_one = clean_given_text(text_input_two)
-    dictionary = combine_dictionaries(dictionary_one, dictionary_two)
+    # dictionary = combine_dictionaries
     return (sorted(dictionary_two), sorted(dictionary_one))
     
 

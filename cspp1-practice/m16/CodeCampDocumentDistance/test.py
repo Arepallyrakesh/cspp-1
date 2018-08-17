@@ -1,13 +1,17 @@
-# List1 = []
-# List2 = []
-# dict1.lower()
-# dict2.lower()
-# List1 = List1.append(list(dict1))
-# List2 = List2.append(list(dict2))
-# print(List1)
-import re
-mystring = "Special $#! characters,?   spaces 888323"
-# ''.join(e for e in string if e.isalnum())
-# re.sub('[^A-Za-z0-9]+', '', mystring)
-cleanString = re.sub('\W+','', mystring )
-print(cleanString)
+def get_factorial_digit(n):
+	sum_ = 0
+	while n > 0:
+		sum_ =  sum_ + factorial(n%10)
+		n = n//10
+	return sum_
+	
+def factorial(n):
+	if n == 0 or n == 1:
+		return 1
+	else:
+		return n*factorial(n-1)
+def main():
+	input_ = 123
+	print(get_factorial_digit(input_))
+
+main()

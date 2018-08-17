@@ -2,11 +2,8 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
-
+import math
 def combine_dictonary(dictionary_one, dictionary_two):
-    # dictionary = {}
-    # for word in dictionary_one:
-    #     if word in dictionary_two:
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
@@ -20,16 +17,30 @@ def combine_dictonary(dictionary_one, dictionary_two):
     return dictionary
 
 def clean_given_text(text_input):
-    words = text_input.lower().strip().replace('\'','')
+    words = text_input.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
     return words
 
 def create_dictionary(word_list):
+    '''
+    returnns str and returns list.
+    '''
+    dictionary = {}
+    stopwords = load_stopwords("stopwords.txt")
+    for word in words_list:
+        word = word.strip()
+        if word not in stopwords and len(word) > 0:
+            if word not in dictionary:
+                dictionary[word] = 1
+            else:
+                dictionary[word] += 1
+    return dictionary
+
 
 
 def calculate_similarity(dictionary):
-    numerator = sum([k[0] * k[1] for k in dictionary.values()])
+    numerator = sum([k[0] *  k[1] for k in dictionary.values()])
     d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
     d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
     return numerator/(d1*d2)
@@ -52,7 +63,6 @@ def similarity(dict1, dict2):
     # clearstring2.lower()
     # x = clearstring1.split()
     # y = clearstring2.split()
-    
     # print(x)
     # print(y)
     # List1 = List1.append(list(dict1))
@@ -67,15 +77,14 @@ def similarity(dict1, dict2):
     #         else:
     #             dict_1[i] += 1
     # print(dict_1)
-    
+
     # for i in y:
     #     if i not in stopwords_doc:
     #         if i not in dict_2:
-    words_list_one = clean_given_text(text_input_one)
-    words_list_one = clean_given_text(text_input_two)
-    # dictionary = combine_dictionaries
-    return (sorted(dictionary_two), sorted(dictionary_one))
-    
+    words_list_one = clean_given_text(dict1)
+    words_list_two = clean_given_text(dict2)
+    dictionary = combine_dictonary(words_list_one, words_list_two)
+    return calculate_similarity(dictionary)
 
 def load_stopwords(filename):
     '''

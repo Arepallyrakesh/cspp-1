@@ -17,7 +17,7 @@ def combine_dictonary(dictionary_one, dictionary_two):
     return dictionary
 
 def clean_given_text(text_input):
-    words = text_input.lower().strip().replace('\'','')
+    words = text_input.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
     return words

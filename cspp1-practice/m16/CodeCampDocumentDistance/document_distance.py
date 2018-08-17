@@ -2,7 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
-
+import math
 def combine_dictonary(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
@@ -40,7 +40,7 @@ def create_dictionary(word_list):
 
 
 def calculate_similarity(dictionary):
-    numerator = sum([k[0] * k[1] for k in dictionary.values()])
+    numerator = sum([k[0] *  k[1] for k in dictionary.values()])
     d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
     d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
     return numerator/(d1*d2)

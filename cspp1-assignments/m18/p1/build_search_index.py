@@ -75,7 +75,7 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()
-        list1.append(enumerate(int(ocument_1))
+        list1.append(enumerate(document_1))
         print(list1)
         if word not in stopwords and len(word) > 0:
             if word not in  search_index:
@@ -84,6 +84,7 @@ def build_search_index(docs):
                 search_index[word] += 1
     
     return search_index
+    
     
 
 

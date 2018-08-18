@@ -48,7 +48,7 @@ def word_list(text):
     string1.strip(" ")
     regex = re.compile('[^a-z]')
     list1 = regex.sub(" ", string1).split(" ")
-    # return list1
+    return list1
     print(list1)
 
 def build_search_index(docs):
@@ -70,7 +70,7 @@ def build_search_index(docs):
     # document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
-    
+    print(docs)
     # print(document_1)
     for ind, word in enumerate(docs):
         list1 = remove_swords(word_list(word))

@@ -85,9 +85,10 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()
+        word = enumerate(word)
         if word not in stopwords and len(word) > 0:
-            if word not in  enumerate(dictionary):
-                dictionary[word] = 1
+            if word  in dictionary:
+                dictionary[word]  = 1
             else:
                 dictionary[word] += 1
     return dictionary
@@ -104,7 +105,6 @@ def print_search_index(index):
     '''
     list2=[]
     keys = sorted(index.keys())
-    list2.append(keys)
     for key in keys:
         print(key, " - ", index[key])
 

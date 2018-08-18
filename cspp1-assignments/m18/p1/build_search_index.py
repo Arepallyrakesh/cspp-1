@@ -56,7 +56,7 @@ def word_list(text):
     removetable = str.maketrans('', '', '@#%123456789')
     x_lis = [s.translate(removetable) for s in text]
     string = ''.join(x_lis)
-    string1 = string.lower().strip()
+    string1 = string.lower()
     regex = re.compile('[^a-z]')
     list1 = regex.sub(" ", string1).split(" ")
     return list1

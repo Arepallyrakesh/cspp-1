@@ -59,7 +59,6 @@ def word_list(text):
     string1 = string.lower().strip()
     regex = re.compile('[^a-z]')
     list1 = regex.sub(" ", string1).split(" ")
-    list1 = enumerate(list1)
     return list1
 
     
@@ -91,7 +90,7 @@ def build_search_index(docs):
                 dictionary[word]  = 1
             else:
                 dictionary[word] += 1
-    return dictionary
+    return enumerate(dictionary)
 
 
 

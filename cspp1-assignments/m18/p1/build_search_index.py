@@ -70,7 +70,7 @@ def build_search_index(docs):
     document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
-    listoftuples = []
+    listoftuples = [(1 , 2)]
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()

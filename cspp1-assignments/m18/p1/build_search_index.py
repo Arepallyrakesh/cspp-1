@@ -86,7 +86,7 @@ def build_search_index(docs):
     for word in document_1:
         word = word.strip()
         if word not in stopwords and len(word) > 0:
-            if word  in  enumerate(dictionary):
+            if word not in  enumerate(dictionary):
                 dictionary[word]  = 1
             else:
                 dictionary[word] += 1

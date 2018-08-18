@@ -88,6 +88,7 @@ def remove_swords(word1):
     for i in word1:
         if i in stopwords:
             list2.remove(i)
+    print(list2)
     return list2
     # for word in document_1:
     #     word = word.strip()

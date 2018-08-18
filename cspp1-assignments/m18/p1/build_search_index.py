@@ -90,13 +90,8 @@ def build_search_index(docs):
                 search_index[word]  = 1
             else:
                 search_index[word] += 1
-    for i, j in enumerate(search_index):
-
-
-
-
-
-
+    return search_index
+    # for i, j in enumerate(search_index):
 
 
 # helper function to print the search index

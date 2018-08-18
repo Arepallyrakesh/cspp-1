@@ -81,12 +81,12 @@ def build_search_index(docs):
                 search_index[i] = [(ind, list1.count(i))]
     return search_index
 
-def r_swords(word, stopwords):
-    list2 = word
-    for i in word:
+def r_swords(word1, stopwords):
+    list2 = word1
+    for i in word1:
         if i in stopwords:
             list2.remove(i)
-        return list2
+    return list2
     # for word in document_1:
     #     word = word.strip()
         

@@ -72,7 +72,7 @@ def build_search_index(docs):
     search_index = {}
     list1 = []
     list1.append(document_1)
-    print(list1)
+    print(document_1)
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()

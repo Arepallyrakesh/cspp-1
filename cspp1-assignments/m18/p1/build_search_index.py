@@ -42,14 +42,15 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    remove = str.maketrans('', '', '@#%123456789')
-    x_lis = [s.translate(remove) for s in text]
-    string = ''.join(x_lis)
-    string1 = string.lower().strip()
+    # remove = str.maketrans('', '', '@#%123456789')
+    # x_lis = [s.translate(remove) for s in text]
+    # string = ''.join(x_lis)
+    # string1 = string.lower().strip()
+    # regex = re.compile('[^a-z]')
+    # list1 = regex.sub(" ", string1).split(" ")
+    # return list1
     regex = re.compile('[^a-z]')
-    list1 = regex.sub(" ", string1).split(" ")
-    return list1
-
+    return [regex.sub("", w.strip()) for w in string.lower().split(" ")]
     
 def build_search_index(docs):
     '''

@@ -99,7 +99,7 @@ def remove_swords(word1):
         if word not in stop_words:
             List3.append(word)
             # list2.remove(word)
-    return list3
+    print(list3) 
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):

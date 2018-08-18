@@ -105,7 +105,7 @@ def print_search_index(index):
     list2=[]
     keys = sorted(index.keys())
     for key in keys:
-        print(key, " - ", index[key])
+        print(key, " - ", index[key] + values())
 
 # main function that loads the docs from files
 def main():

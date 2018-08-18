@@ -71,7 +71,7 @@ def build_search_index(docs):
     document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
-    stopwords = load_stopwords("stopwords.txt")
+    
     # print(document_1)
     for ind, word in enumerate(docs):
         list1 = r_swords(word_list(word), stopwords)
@@ -82,8 +82,9 @@ def build_search_index(docs):
                 search_index[i] = [(ind, list1.count(i))]
     return search_index
 
-def r_swords(word1, stopwords):
+def r_swords(word1):
     list2 = word1
+    stopwords = load_stopwords("stopwords.txt")
     for i in word1:
         if i in stopwords:
             list2.remove(i)

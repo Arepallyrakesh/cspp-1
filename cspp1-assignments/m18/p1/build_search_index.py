@@ -70,10 +70,11 @@ def build_search_index(docs):
     document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
-    listoftuples = [(1 , 2)]
+    l
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()
+        word = 
         if word not in stopwords and len(word) > 0:
             if word not in  search_index:
                 search_index[word]  = 1
@@ -81,7 +82,7 @@ def build_search_index(docs):
                 search_index[word] += 1
     
     return search_index
-    # for i, j in enumerate(search_index):
+    
 
 
 # helper function to print the search index

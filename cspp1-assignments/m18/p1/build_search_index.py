@@ -73,7 +73,7 @@ def build_search_index(docs):
     # print(document_1)
     for ind, word in enumerate(docs):
         list1 = remove_swords(word_list(word))
-        for i in list1:
+        for i in set(list1):
             if i in search_index:
                 search_index[i].append((ind, list1.count(i)))
             else:

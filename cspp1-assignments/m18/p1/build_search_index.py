@@ -70,20 +70,25 @@ def build_search_index(docs):
     document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
-    list1 = []
-    list1.append(document_1)
-    print(document_1)
     stopwords = load_stopwords("stopwords.txt")
-    for word in document_1:
-        word = word.strip()
-        
-        if word not in stopwords and len(word) > 0:
-            if word not in  search_index:
-                search_index[word]  = 1
+    print(document_1)
+    for ind, word in enumerate(docs):
+        for i in set(document_1):
+            if i in search_index:
+                search_index[i].append(ind, document_1.count(i))
             else:
-                search_index[word] += 1
-    
+                search_index[i] = [(ind, document_1.count(i))]
     return search_index
+    # for word in document_1:
+    #     word = word.strip()
+        
+    #     if word not in stopwords and len(word) > 0:
+    #         if word not in  search_index:
+    #             search_index[word]  = 1
+    #         else:
+    #             search_index[word] += 1
+    
+    # return search_index
 
 #     for index, line in enumerate(docs):
 #         LIST_ = remove_stopwords(word_list(line), STOP_WORD)

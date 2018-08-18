@@ -78,20 +78,21 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    search_index = {}
+    
     document_1 = word_list(docs)
     # print(document_1)
-    dictionary = {}
+    search_index = {}
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()
         if word not in stopwords and len(word) > 0:
-            if word not in  dictionary:
-                dictionary[word]  = 1
+            if word not in  search_index:
+                search_index[word]  = 1
             else:
-                dictionary[word] += 1
-    for i, j in enumerate(dictionary):
-        return dictionary
+                search_index[word] += 1
+    for i, j in enumerate(search_index):
+
+
 
 
 

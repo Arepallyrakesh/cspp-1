@@ -50,7 +50,8 @@ def word_list(text):
     # list1 = regex.sub(" ", string1).split(" ")
     # return list1
     regex = re.compile('[^a-z]')
-    return [regex.sub("", w.strip()) for w in string.lower().split(" ")]
+    x_list = [regex.sub("", w.strip()) for w in string.lower().split(" ")]
+    return x_list
     
 def build_search_index(docs):
     '''

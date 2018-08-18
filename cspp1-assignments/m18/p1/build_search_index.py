@@ -45,7 +45,7 @@ def word_list(text):
     x_lis = [s.translate(remove) for s in text]
     string = ''.join(x_lis)
     string1 = string.lower().strip()
-    regex = re.compile('[^a-z]')
+    regex = re.compile('[^a-z]').strip()
     list1 = regex.sub(" ", string1).split(" ")
     return list1
 
@@ -95,7 +95,7 @@ def remove_swords(word1):
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:
         if word in stop_words:
-            list2.remove(word)
+            list2.reremove(word)
     return list2
 # helper function to print the search index
 # use this to verify how the search index looks

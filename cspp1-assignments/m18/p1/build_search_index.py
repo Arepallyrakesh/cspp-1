@@ -71,7 +71,7 @@ def build_search_index(docs):
     # print(document_1)
     search_index = {}
     list1 = []
-    list1.append(enumerate(docs))
+    list1.append(enumerate(document_1))
     print(list1)
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:

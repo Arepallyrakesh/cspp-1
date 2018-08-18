@@ -102,7 +102,7 @@ def print_search_index(index):
     '''
         print the search index
     '''
-    list2=[]
+  
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])

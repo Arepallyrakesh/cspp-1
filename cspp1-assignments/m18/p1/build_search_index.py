@@ -24,18 +24,6 @@
 # helper function to load the stop words from a file
 import re
 
-# def dictionary(word):
-#     dictionary = {}
-#     stopwords = load_stopwords("stopwords.txt")
-#     for word in words_list:
-#         word = word.strip()
-#         if word not in stopwords and len(word) > 0:
-#             if word not in dictionary:
-#                 dictionary[word] = 1
-#             else:
-#                 dictionary[word] += 1
-#     print(dictionary)
-
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -82,6 +70,7 @@ def build_search_index(docs):
     document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
+    listoftuples = []
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()
@@ -90,6 +79,7 @@ def build_search_index(docs):
                 search_index[word]  = 1
             else:
                 search_index[word] += 1
+    search_index.append(listoftuples)
     return search_index
     # for i, j in enumerate(search_index):
 

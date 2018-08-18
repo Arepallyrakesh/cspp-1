@@ -73,7 +73,7 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     print(document_1)
     for ind, word in enumerate(docs):
-        list1 = remove_stopwords(word_list(lword), stopwords)
+        list1 = remove_stopwords(word_list(word), stopwords)
         for i in set(list1):
             if i in search_index:
                 search_index[i].append(ind, list1.count(i))

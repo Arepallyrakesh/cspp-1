@@ -32,7 +32,6 @@ def load_stopwords(filename):
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
             stopwords[line.strip()] = 0
-    
     return stopwords
 
 
@@ -50,7 +49,6 @@ def word_list(text):
     list1 = regex.sub(" ", string1).split(" ")
     return list1
 
-    
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -67,7 +65,6 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    
     # document_1 = word_list(docs)
     # print(document_1)
     search_index = {}
@@ -124,8 +121,6 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    
-
     # call print to display the search index
     print_search_index(build_search_index(documents))
 

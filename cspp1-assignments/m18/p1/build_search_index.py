@@ -42,8 +42,8 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    removetable = str.maketrans('', '', '@#%123456789')
-    x_lis = [s.translate(removetable) for s in text]
+    remove = str.maketrans('', '', '@#%123456789')
+    x_lis = [s.translate(remove) for s in text]
     string = ''.join(x_lis)
     string1 = string.lower().strip()
     regex = re.compile('[^a-z]')

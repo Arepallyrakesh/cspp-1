@@ -47,7 +47,7 @@ def word_list(text):
     string = ''.join(x_lis)
     string1 = string.lower().strip()
     regex = re.compile('[^a-z]')
-    list1 = regex.sub(" ", string1).strip().split(" ")
+    list1 = regex.sub(" ", string1).split(" ")
     return list1
 
     

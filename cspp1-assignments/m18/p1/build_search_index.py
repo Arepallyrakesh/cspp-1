@@ -93,11 +93,13 @@ def build_search_index(docs):
 
 def remove_swords(word1):
     list2 = word1
+    List3 =  []
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:
         if word in stop_words:
-            list2.remove(word)
-    return list2
+            List3.append(word)
+            # list2.remove(word)
+    return list3
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):

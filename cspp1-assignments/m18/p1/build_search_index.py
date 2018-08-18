@@ -78,7 +78,7 @@ def build_search_index(docs):
                 search_index[i].append((ind, list1.count(i)))
             else:
                 search_index[i] = [(ind, list1.count(i))]
-    print( search_index)
+    return search_index
 
     # for word in document_1:
     #     word = word.strip()

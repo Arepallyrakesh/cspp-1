@@ -79,6 +79,13 @@ def build_search_index(docs):
             else:
                 search_index[i] = [(ind, document_1.count(i))]
     return search_index
+
+def remove_stopwords(word, stopwords):
+    list2 = word
+    for i in word:
+        if i in stopwords:
+            list2.remove(i)
+    return list2
     # for word in document_1:
     #     word = word.strip()
         

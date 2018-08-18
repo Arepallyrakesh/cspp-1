@@ -59,6 +59,7 @@ def word_list(text):
     string1 = string.lower().strip()
     regex = re.compile('[^a-z]')
     list1 = regex.sub(" ", string1).split(" ")
+    list1 = enumerate(list1)
     return list1
 
     
@@ -86,7 +87,7 @@ def build_search_index(docs):
     for word in document_1:
         word = word.strip()
         if word not in stopwords and len(word) > 0:
-            if word not in  enumerate(dictionary):
+            if word not in  dictionary:
                 dictionary[word]  = 1
             else:
                 dictionary[word] += 1
@@ -105,7 +106,7 @@ def print_search_index(index):
     list2=[]
     keys = sorted(index.keys())
     for key in keys:
-        print(key, " - ", index[key] + values())
+        print(key, " - ", index[key])
 
 # main function that loads the docs from files
 def main():

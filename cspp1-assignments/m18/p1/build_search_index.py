@@ -84,12 +84,11 @@ def build_search_index(docs):
 
 def remove_swords(word1):
     list2 = word1
-    stopwords = load_stopwords("stopwords.txt")
+    stop_words = load_stopwords("stopwords.txt")
     for i in word1:
-        if i in stopwords:
+        if i in stop_words:
             list2.remove(i)
     print(list2)
-    return list2
     # for word in document_1:
     #     word = word.strip()
         

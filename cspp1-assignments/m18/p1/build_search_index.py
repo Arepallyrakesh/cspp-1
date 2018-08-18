@@ -79,7 +79,7 @@ def build_search_index(docs):
                 search_index[word]  = 1
             else:
                 search_index[word] += 1
-    search_index.append(listoftuples)
+    search_index[key].append(listoftuples)
     return search_index
     # for i, j in enumerate(search_index):
 

@@ -44,9 +44,10 @@ def word_list(text):
     remove = str.maketrans('', '', '@#%123456789')
     x_lis = [s.translate(remove) for s in text]
     string = ''.join(x_lis)
-    string1 = string.lower().strip()
+    string1 = string.lower()
+    string1.strip()
     regex = re.compile('[^a-z]')
-    list1 = regex.sub(" ", string1).split(" ").strip()
+    list1 = regex.sub(" ", string1).split(" ")
     return list1
 
 def build_search_index(docs):

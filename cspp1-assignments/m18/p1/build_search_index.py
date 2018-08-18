@@ -98,10 +98,8 @@ def remove_swords(word1):
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:
         if word in stop_words:
-            list2 = list2.remove(word)
+            list2.remove(word)
     return list2
-
-
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):

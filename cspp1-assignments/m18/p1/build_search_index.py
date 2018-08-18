@@ -76,7 +76,7 @@ def build_search_index(docs):
         list1 = remove_stopwords(word_list(word), stopwords)
         for i in set(list1):
             if i in search_index:
-                search_index[i].append(ind, list1.count(i))
+                search_index[i].append((ind, list1.count(i))
             else:
                 search_index[i] = [(ind, list1.count(i))]
     return search_index

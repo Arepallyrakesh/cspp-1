@@ -96,7 +96,7 @@ def remove_swords(word1):
     List3 =  []
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:
-        if word in stop_words:
+        if word not in stop_words:
             List3.append(word)
             # list2.remove(word)
     return list3

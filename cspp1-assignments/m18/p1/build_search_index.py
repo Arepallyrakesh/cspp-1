@@ -82,11 +82,11 @@ def build_search_index(docs):
     return search_index
 
 def remove_stopwords(word, stopwords):
-    list2 = word
-    for i in word:
-        if i in stopwords:
-            list2.remove(i)
-    return list2
+    list2 = word
+    for i in word:
+        if i in stopwords:
+            list2.remove(i)
+    return list2
     # for word in document_1:
     #     word = word.strip()
         

@@ -90,7 +90,9 @@ def build_search_index(docs):
                 dictionary[word]  = 1
             else:
                 dictionary[word] += 1
-    return enumerate(dictionary)
+    for i, j in enumerate(dictionary):
+        return dictionary
+
 
 
 

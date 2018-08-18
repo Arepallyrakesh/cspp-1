@@ -85,13 +85,13 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     for word in document_1:
         word = word.strip()
-        print(word)
-        if word not in stopwords and len(word) > 0:
-            if word  in dictionary:
-                dictionary[word]  = 1
-            else:
-                dictionary[word] += 1
-    return dictionary
+        print(enumerate(word))
+    #     if word not in stopwords and len(word) > 0:
+    #         if word  in dictionary:
+    #             dictionary[word]  = 1
+    #         else:
+    #             dictionary[word] += 1
+    # return dictionary
 
 
 

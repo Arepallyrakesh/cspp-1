@@ -9,7 +9,7 @@ def get_face_values(hand):
     '''
     returns face value
     '''
-    face_values = [GLOBAL_DICT[f] for f, suit_value in hand]
+    face_values = [DATA_INPUT[f] for f, suit_value in hand]
     return face_values
 
 
@@ -38,7 +38,7 @@ def is_straight(hand):
     #     if face_val[k] != face_val[k+1]:
     #         return False
     # return True
-    face_values = [GLOBAL_DICT[f] for f, suit_value in hand]
+    face_values = [DATA_INPUT[f] for f, suit_value in hand]
     return sum(face_values) - min(face_values)*len(face_values) == 10
 
 def is_flush(hand):

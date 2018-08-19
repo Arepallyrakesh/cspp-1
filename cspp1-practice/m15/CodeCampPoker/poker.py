@@ -104,7 +104,7 @@ def two_pair(hand):
     # for k in range(len(face_val3) - 1):
     #     if face_val3[k+1] - face_val3[k] == 0:
     #         count = count + 1
-    return count == 1
+    # return count == 1
     face_values = get_face_values(hand)
     face_values.sort()
     return len(set(face_values)) == 3 and len(set(face_values[:2])) == 1 or len(set(face_values[1:3])) == 1

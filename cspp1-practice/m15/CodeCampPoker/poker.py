@@ -5,6 +5,20 @@
 '''
 DATA_INPUT = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6,\
  '5':5, '4':4, '3':3, '2':2}
+def get_face_values(hand):
+    '''
+    returns face value
+    '''
+    face_values = [GLOBAL_DICT[f] for f, suit_value in hand]
+    return face_values
+
+
+def get_suit_values(hand):
+    '''
+    returns suit values
+    '''
+    suit_values = [s for f, s in hand]
+    return suit_values
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -15,13 +29,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    
-
-
-    # if all(True if c in '2345A' else False for c, s in hand):
-    #     return True
-    # card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    # return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
 
     # face_val = []
     # for i in hand:
@@ -31,6 +38,9 @@ def is_straight(hand):
     #     if face_val[k] != face_val[k+1]:
     #         return False
     # return True
+    face_values = [GLOBAL_DICT[f] for f, suit_value in hand]
+    return sum(face_values) - min(face_values)*len(face_values) == 10
+
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -40,65 +50,67 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    suit = hand[0]
-    for i in hand:
-        if suit[1] != i[1]:
-            return False
-    return True
-    # suit = []
-    # sum_as = 0
+    # suit = hand[0]
     # for i in hand:
-    #     suit.append(i[1])
-    # for i in suit:
-    #     sum_as = sum_as * ord(i)
-    # if sum_as == 5 * ord(i):
-    #     return True
-    # return False
+    #     if suit[1] != i[1]:
+    #         return False
+    # return True
+    return len(set(s for f, s in hand)) == 1
+
 
 def four_of_kind(hand):
     '''
     four of kind
     '''
-    count = 0
-    face_val1 = []
-    for i in hand:
-        face_val1.append(DATA_INPUT[i[0]])
-    face_val1.sort()
-    for k in range(len(face_val1) - 1):
-        if face_val1[k+1] - face_val1[k] == 0:
-            count = count + 1
-    return count == 3
+    # count = 0
+    # face_val1 = []
+    # for i in hand:
+    #     face_val1.append(DATA_INPUT[i[0]])
+    # face_val1.sort()
+    # for k in range(len(face_val1) - 1):
+    #     if face_val1[k+1] - face_val1[k] == 0:
+    #         count = count + 1
+    # return count == 3
+    face_values = get_face_values(hand)
+    face_values.sort()
+    return len(set(face_values[:-1])) == 1 or len(set(face_values[-4:])) == 1
 
 def three_of_kind(hand):
     '''
     three od kind
     '''
-    count = 0
-    face_val2 = []
-    for i in hand:
-        face_val2.append(DATA_INPUT[i[0]])
-    face_val2.sort()
-    for k in range(len(face_val2) - 1):
-        if face_val2[k+1] - face_val2[k] == 0:
-            count = count + 1
-    return count == 2
+    # count = 0
+    # face_val2 = []
+    # for i in hand:
+    #     face_val2.append(DATA_INPUT[i[0]])
+    # face_val2.sort()
+    # for k in range(len(face_val2) - 1):
+    #     if face_val2[k+1] - face_val2[k] == 0:
+    #         count = count + 1
+    # return count == 2
+    face_values = get_face_values(hand)
+    face_values.sort()
+    return len(set(face_values)) == 3
 
 def two_pair(hand):
     '''
     two pair
     '''
-    count = 0
-    face_val3 = []
-    for i in hand:
-        face_val3.append(DATA_INPUT[i[0]])
-    face_val3.sort()
-    for k in range(len(face_val3) - 1):
-        if face_val3[k+1] - face_val3[k] == 0:
-            count = count + 1
+    # count = 0
+    # face_val3 = []
+    # for i in hand:
+    #     face_val3.append(DATA_INPUT[i[0]])
+    # face_val3.sort()
+    # for k in range(len(face_val3) - 1):
+    #     if face_val3[k+1] - face_val3[k] == 0:
+    #         count = count + 1
     return count == 1
-'''
-one pair hand
-# def one_pair(hand):
+    face_values = get_face_values(hand)
+    face_values.sort()
+    return len(set(face_values)) == 3 and len(set(face_values[:2])) == 1 or len(set(face_values[1:3])) == 1
+
+
+def one_pair(hand):
 #     count = 0
 #     face_val4 = []
 #     for i in hand:
@@ -107,9 +119,20 @@ one pair hand
 #     for k in range(len(face_val4) - 1):
 #         if face_val4[k+1] - face_val4[k] == 0:
 #             count = count + 1
-#     return count == 0
+#     return count == 0face_values = get_face_values(hand)
+    face_values.sort()
+    return len(set(face_values)) == 4
+    face_values = get_face_values(hand)
 
-'''
+def is_full_house(hand):
+    '''
+    returns full house
+    '''
+    face_values = get_face_values(hand)
+    face_values.sort()
+    return len(set(face_values)) == 2
+
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -134,22 +157,23 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    count = 0
     if is_straight(hand) and is_flush(hand):
-        count = 6
-    elif four_of_kind(hand):
-        count = 5
-    elif is_flush(hand):
-        count = 4
-    elif is_straight(hand):
-        count = 3
-    elif three_of_kind(hand):
-        count = 2
-    elif two_pair(hand):
-        count = 1
-    else:
-        count = 0
-    return count
+        return 8
+    if is_four_of_kind(hand):
+        return 7
+    if is_full_house(hand):
+        return 6
+    if is_flush(hand):
+        return 5
+    if is_straight(hand):
+        return 4
+    if is_three_of_kind(hand):
+        return 3
+    if is_two_pair(hand):
+        return 2
+    if is_one_pair(hand):
+        return 1
+    return 0
 
 def poker(hands):
     '''

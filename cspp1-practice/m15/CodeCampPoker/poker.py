@@ -120,9 +120,9 @@ def one_pair(hand):
 #         if face_val4[k+1] - face_val4[k] == 0:
 #             count = count + 1
 #     return count == 0face_values = get_face_values(hand)
+    face_values = get_face_values(hand)
     face_values.sort()
     return len(set(face_values)) == 4
-    face_values = get_face_values(hand)
 
 def is_full_house(hand):
     '''

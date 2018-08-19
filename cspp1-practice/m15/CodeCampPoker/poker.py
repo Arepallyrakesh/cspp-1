@@ -112,7 +112,7 @@ def two_pair(hand):
 
 def one_pair(hand):
     '''
-    onepair 
+    onepair
     '''
 #     count = 0
 #     face_val4 = []

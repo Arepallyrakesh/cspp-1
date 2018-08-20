@@ -92,7 +92,7 @@ def build_search_index(docs):
     # return search_index
 
 def remove_swords(word1):
-    list2 = word1
+    list2 = word1 [ : ]
     List3 =  []
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:
@@ -124,7 +124,7 @@ def main():
         documents.append(input())
         i += 1
     # call print to display the search index
-    print(print_search_index(build_search_index(documents)))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()

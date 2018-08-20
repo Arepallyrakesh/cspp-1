@@ -92,7 +92,7 @@ def build_search_index(docs):
     # return search_index
 
 def remove_swords(word1):
-    list2 = word1 [ : ]
+    list2 = word1
     List3 =  []
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:

@@ -98,7 +98,7 @@ def remove_swords(word1):
     for word in word1:
         if word not in stop_words and len(word) > 0:
             List3.append(word)
-            # list2.remove(word)
+           
     return List3 
 # helper function to print the search index
 # use this to verify how the search index looks
@@ -106,7 +106,6 @@ def print_search_index(index):
     '''
         print the search index
     '''
-    list2=[]
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])
@@ -125,7 +124,7 @@ def main():
         documents.append(input())
         i += 1
     # call print to display the search index
-    print_search_index(build_search_index(documents))
+    print(print_search_index(build_search_index(documents)))
 
 if __name__ == '__main__':
     main()

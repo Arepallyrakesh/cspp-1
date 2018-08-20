@@ -47,7 +47,7 @@ def word_list(text):
     string1 = string.lower()
     string1.strip(" ")
     regex = re.compile('[^a-z]')
-    list1 = regex.sub(" ", string1).split(" ")
+    list1 = regex.sub(" ", string1).replace('\'', '').split(" ")
     return list1
 
 def build_search_index(docs):
@@ -97,7 +97,7 @@ def remove_swords(word1):
     stop_words = load_stopwords("stopwords.txt")
     for word in word1:
         if word not in stop_words and len(word) > 0:
-            List3.append(word).replace("'", "")
+            List3.append(word)
            
     return List3 
 # helper function to print the search index

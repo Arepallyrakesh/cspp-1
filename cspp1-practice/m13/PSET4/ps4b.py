@@ -1,10 +1,11 @@
+'''
+@author:Arepallyrakesh
+'''
 from ps4a import *
-# import time
-
-
+import time
 #
 #
-# Problem #6: Computer chooses a word
+# Computer chooses a word
 #
 #
 def compChooseWord(hand, wordList, n):
@@ -23,30 +24,26 @@ def compChooseWord(hand, wordList, n):
 
     returns: string or None
     """
-    # BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do
-    # your coding within the pseudocode (leaving those comments in-place!)
     # Create a new variable to store the maximum score seen so far (initially 0)
-
+    bestScore = 0
     # Create a new variable to store the best word seen so far (initially None)
-
+    bestWord = None
     # For each word in the wordList
-
+    for word in wordList:
         # If you can construct the word from your hand
-        # (hint: you can use isValidWord, or - since you don't really need to
-        # test if the word is in the wordList - you can make a similar function
-        # that omits that test)
-
-            # Find out how much making that word is worth
-
+        if is_valid_word(word, hand, wordList):
+            # find out how much making that word is worth
+            score = get_wordscore(word, n)
             # If the score for that word is higher than your best score
-
-                # Update your best score, and best word accordingly
-
+            if (score > bestScore):
+                # update your best score, and best word accordingly
+                bestScore = score
+                bestWord = word
     # return the best word you found.
-
+    return bestWord
 
 #
-# Problem #7: Computer plays a hand
+# Computer plays a hand
 #
 def compPlayHand(hand, wordList, n):
     """
@@ -67,33 +64,65 @@ def compPlayHand(hand, wordList, n):
     wordList: list (string)
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     """
-    # TO DO ... <-- Remove this comment when you code this function
+    # Keep track of the total score
+    totalScore = 0
+    # As long as there are still letters left in the hand:
+    while (calculate_hand_length(hand) > 0):
+        # Display the hand
+        print("Current Hand: ", end=' ')
+        display_hand(hand)
+        # computer's word
+        word = compChooseWord(hand, wordList, n)
+        # If the input is a single period:
+        if word == None:
+            # End the game (break out of the loop)
+            break
 
-
+        # Otherwise (the input is not a single period):
+        else:
+            # If the word is not valid:
+            if (not is_valid_word(word, hand, wordList)):
+                print('This is a terrible error! I need to check my own code!')
+                break
+            # Otherwise (the word is valid):
+            else:
+                # Tell the user how many points the word earned, and the updated total score 
+                score = get_wordscore(word, n)
+                totalScore += score
+                print('"' + word + '" earned ' + str(score) + ' points. Total: ' + str(totalScore) + ' points')
+                # Update hand and show the updated hand to the user
+                hand = update_hand(hand, word)
+                print()
+    # Game is over (user entered a '.' or ran out of letters), so tell user the total score
+    print('Total score: ' + str(totalScore) + ' points.')
 #
-# Problem #8: Playing a game
+# Problem #6: Playing a game
 #
 #
 def playGame(wordList):
     """
     Allow the user to play an arbitrary number of hands.
-
+ 
     1) Asks the user to input 'n' or 'r' or 'e'.
         * If the user inputs 'e', immediately exit the game.
-        * If the user inputs anything that's not 'n', 'r', or 'e', keep asking
-          them again.
+        * If the user inputs anything that's not 'n', 'r', or 'e', keep asking them again.
+    """
 
+    """
     2) Asks the user to input a 'u' or a 'c'.
-        * If the user inputs anything that's not 'c' or 'u', keep asking them
-          again.
+        * If the user inputs anything that's not 'c' or 'u', keep asking them again.
+    """
+    
 
+
+    """
     3) Switch functionality based on the above choices:
         * If the user inputted 'n', play a new (random) hand.
         * Else, if the user inputted 'r', play the last hand again.
-
+      
         * If the user inputted 'u', let the user play the game
           with the selected hand, using playHand.
-        * If the user inputted 'c', let the computer play the
+        * If the user inputted 'c', let the computer play the 
           game with the selected hand, using compPlayHand.
 
     4) After the computer or user has played the hand, repeat from step 1
@@ -101,12 +130,38 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print "playGame not yet implemented."  # <-- Remove this when you code this function
+    hand = []
+    while True:
+        user_input1 = input("Enter a input c(to play computer) or u(to play by you) ")
+        if user_input1 == 'u':
+            user_input = input("Enter a input n(for new hand) or r(to play last hand) or e(exit the game)")
+            if user_input == 'n':
+                hand = deal_hand(HAND_SIZE)
+                play_hand(hand, word_list, HAND_SIZE)
+            elif user_input == 'r':
+                play_hand(hand, word_list, HAND_SIZE)
+            elif user_input == 'e':
+                print("Game Over!")
+                break
+        elif user_input1 == 'c':
+            user_input = input("Enter a input n(for new hand) or r(to play last hand) or e(exit the game)")
+            if user_input == 'n':
+                hand = deal_hand(HAND_SIZE)
+                compPlayHand(hand, word_list, HAND_SIZE)
+            elif user_input == 'r':
+                compPlayHand(hand, word_list, HAND_SIZE)
+            elif user_input == 'e':
+                print("Game Over!")
+        else:
+            print("Invalid input")
 
 
+        
 #
 # Build data structures used for entire session and play game
 #
 if __name__ == '__main__':
-    wordList = loadWords()
-    playGame(wordList)
+    word_list = load_words()
+    playGame(word_list)
+
+

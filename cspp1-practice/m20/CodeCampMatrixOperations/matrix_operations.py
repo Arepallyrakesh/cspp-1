@@ -29,7 +29,7 @@ def add_matrix(m1, m2):
     result = []
     result1 = []
     for i in range(len(m1)):
-        for j in range(len(m1[0]) - 1):
+        for j in range(len(m1[0])):
             result.append(m1[i][j] + m2[i][j])
 
     return result

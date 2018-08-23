@@ -6,9 +6,9 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-     
+
     # result2 = []
-    
+
     # result = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
     # for i in range(len(m1)):
     #     for j in range(len(m2[0])):
@@ -23,7 +23,7 @@ def mult_matrix(m1, m2):
             for j in range(len(m2[0])):
                 for k in range(len(m2)):
                     add_[i][j] += m1[i][k] * m2[k][j]
-        return add_      
+        return add_
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -35,7 +35,6 @@ def mult_matrix(m1, m2):
 
 def re_mat(rows, colums):
     add_matrix = [[0 for i in range(colums)] for j in range(rows)]
-    
     return add_matrix
 
 
@@ -48,7 +47,6 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
     #     result1 = []
     #     for i in range(len(m1)):
@@ -57,7 +55,6 @@ def add_matrix(m1, m2):
     #             result.append(m1[i][j] + m2[i][j])
     #             # result1.append(list(map(int,  )))
     #         result1.append(result)
-                
     #     return result1
     # # except ValueError:
     # #     print("Matrix shapes invalid for add")
@@ -66,11 +63,11 @@ def add_matrix(m1, m2):
     # add_ = []
  
     # print(m1, m2)
-    add_ = re_mat(len(m1), len(m1[0])) 
+    add_ = re_mat(len(m1), len(m1[0]))
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
         for i in range(len(m1)):
             for j in range(len(m1[0])):
-                # add_1 = add_           
+                # add_1 = add_
                 add_[i][j] += (m1[i][j] + m2[i][j])
         return add_
     else:
@@ -119,7 +116,6 @@ def main():
     m2 = read_matrix()
     if m2 is None:
         exit()
-    
     # add matrix 1 and matrix 2
     print(add_matrix(m1, m2))
 

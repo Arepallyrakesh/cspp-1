@@ -25,16 +25,10 @@ def mult_matrix(m_1 , m_2):
         for i in range(len(m_1)):
             for j in range(len(m_2[0])):
                 for k in range(len(m_2)):
-                    add_[i][j] += m_1   [i][k] * m_2[k][j]
+                    add_[i][j] += m_1[i][k] * m_2[k][j]
         return add_
-    else:
-        print("Error: Matrix shapes invalid for mult")
-        return None
-
-
-
-
-
+    print("Error: Matrix shapes invalid for mult")
+    return None
 
 def re_mat(rows, colums):
     '''
@@ -42,8 +36,6 @@ def re_mat(rows, colums):
     '''
     add_matrix = [[0 for i in range(colums)] for j in range(rows)]
     return add_matrix
-
-
 
 def add_matrix(m_1  , m_2):
     '''
@@ -68,20 +60,15 @@ def add_matrix(m_1  , m_2):
     # print(m_1 , m_2)
     # add_ = []
     # print(m_1 , m_2)
-    add_ = re_mat(len(m_1   ), len(m_1  [0]))
-    if len(m_1  ) == len(m_2) and len(m_1   [0]) == len(m_2[0]):
-        for i in range(len(m_1  )):
-            for j in range(len(m_1  [0])):
+    add_ = re_mat(len(m_1), len(m_1[0]))
+    if len(m_1) == len(m_2) and len(m_1[0]) == len(m_2[0]):
+        for i in range(len(m_1)):
+            for j in range(len(m_1[0])):
                 # add_1 = add_
-                add_[i][j] += (m_1  [i][j] + m_2[i][j])
+                add_[i][j] += m_1[i][j] + m_2[i][j]
         return add_
-    else:
-        print("Error: Matrix shapes invalid for addition")
-        return None
-
-
-
-
+    print("Error: Matrix shapes invalid for addition")
+    return None
 
 def read_matrix():
     '''

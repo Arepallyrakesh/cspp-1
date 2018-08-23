@@ -26,13 +26,14 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     
-    result = []
+    
     result1 = []
     for i in range(len(m1)):
+        result = []
         for j in range(len(m1[0])):
             result.append(m1[i][j] + m2[i][j])
             # result1.append(list(map(int,  )))
-    result1.append([result])
+        result1.append(result)
             
     return result1
     # except ValueError:

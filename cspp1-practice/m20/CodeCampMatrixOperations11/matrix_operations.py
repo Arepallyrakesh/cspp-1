@@ -17,7 +17,7 @@ def mult_matrix(m1, m2):
     #         # result1.append(result)
     #     # result1.append(result1)
     # return result
-    add_ = re_mat(len(m2), len(m2[0])) 
+    add_ = re_mat(len(m1), len(m2[0])) 
     if len(m1[0]) == len(m2):
         for i in range(len(m1)):
             for j in range(len(m2[0])):

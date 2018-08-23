@@ -16,7 +16,7 @@ def mult_matrix(m1, m2):
                 C[i][j] += m1[i][k] * m2[k][j]
             # result1.append(result)
         # result1.append(result1)
-    return c
+    return C
   
 
 

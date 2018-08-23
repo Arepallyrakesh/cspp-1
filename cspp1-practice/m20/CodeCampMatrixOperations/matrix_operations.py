@@ -76,7 +76,7 @@ def read_matrix():
     # return matrix
     matrix = []
     list_input = input().split(",")
-    rows, columns = int(list_input[0], list_input[1])
+    rows, columns = int(list_input[0]), int(list_input[1])
     for _ in range(rows):
         list_mat_row = input().split()
         if columns == len(list_mat_row):

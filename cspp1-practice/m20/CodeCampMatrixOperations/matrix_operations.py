@@ -49,7 +49,8 @@ def add_matrix(m1, m2):
     # print(m1, m2)
     # add_ = []
  
-    print(m1, m2)
+    # print(m1, m2)
+    add_ = []
     for i in range(len(m1)):
         for j in range(len(m1[0])):
             add_ = re_mat(len(m1), len(m1[0]))

@@ -50,12 +50,12 @@ def add_matrix(m1, m2):
     # add_ = []
  
     # print(m1, m2)
-    add_1 = []
+    add_ = []
     for i in range(len(m1)):
         for j in range(len(m1[0])):
             add_ = re_mat(len(m1), len(m1[0])) 
-            add_1 = add_           
-            add_1 += m1[i][j] + m2[i][j]
+            # add_1 = add_           
+            add_ += (m1[i][j] + m2[i][j])
     return add_
     # else:
     #     print("Error: Matrix shapes invalid for addition")

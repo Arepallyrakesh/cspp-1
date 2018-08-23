@@ -48,6 +48,8 @@ def add_matrix(m1, m2):
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
     # print(m1, m2)
     # add_ = []
+    m1 = read_matrix(m1)
+    m2 = read_matrix(m2)
     for i in range(len(m1)):
         for j in range(len(m1[0])):
             add_ = re_mat(len(m1), len(m1[0]))
@@ -85,6 +87,7 @@ def read_matrix():
         list_mat_row = input().split()
         if columns == len(list_mat_row):
             matrix.append([int(i) for i in list_mat_row])
+            # print(matrix)
         else:
             print("error: invalid input")
             return None

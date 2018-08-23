@@ -9,7 +9,7 @@ def mult_matrix(m1, m2):
      
     # result2 = []
     result1 = []
-    C = [[0 for row in range(len(A))] for col in range(len(B[0]))]
+    C = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
     for i in range(len(m1)):
         for j in range(len(m2[0])):
             for k in range(len(m2)):

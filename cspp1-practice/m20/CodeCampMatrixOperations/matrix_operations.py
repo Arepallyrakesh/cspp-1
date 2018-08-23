@@ -48,8 +48,7 @@ def add_matrix(m1, m2):
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
     # print(m1, m2)
     # add_ = []
-    m1 = read_matrix()
-    m2 = read_matrix()
+ 
     print(m1, m2)
     for i in range(len(m1)):
         for j in range(len(m1[0])):

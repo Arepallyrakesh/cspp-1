@@ -41,7 +41,6 @@ def read_matrix():
     mat = input().split(",")
     row_size = int(mat[0])
     column_size = int(mat[1])
-    print(row_size, column_size)
     matrix = []
     for i in range(row_size):
         matrix.append(list(map(int, input().rstrip().split(" "))))

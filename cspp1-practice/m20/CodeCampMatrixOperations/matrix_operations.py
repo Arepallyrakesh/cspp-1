@@ -50,7 +50,7 @@ def add_matrix(m1, m2):
     for i in range(rows):
         for j in range(columns):
             add = re_mat(rows, columns)
-            print(add)
+            # print(add)
             add = m1[i][j] + m2[i][j]
     return add
     # else:

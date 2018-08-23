@@ -112,8 +112,13 @@ def read_matrix():
 def main():
     # read matrix 1
     m1 = read_matrix()
+    if m1 is None:
+        exit()
+
     # read matrix 2
     m2 = read_matrix()
+    if m2 is None:
+        exit()
     
     # add matrix 1 and matrix 2
     print(add_matrix(m1, m2))

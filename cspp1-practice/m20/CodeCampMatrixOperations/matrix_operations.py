@@ -28,8 +28,8 @@ def add_matrix(m1, m2):
     
     result = []
     result1 = []
-    for i in range(len(m1) - 1):
-        for j in range(len(m1[0])):
+    for i in range(len(m1)):
+        for j in range(len(m1[0]) - 1):
             result[i][j] += m1[i][j] + m2[i][j]
             result1.append(result[i][j])
     return result1

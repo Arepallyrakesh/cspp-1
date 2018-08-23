@@ -30,7 +30,7 @@ def add_matrix(m1, m2):
     result1 = []
     for i in range(len(m1)):
         for j in range(len(m1[0])):
-            result[0][0].m1[i][j] + m2[i][j]
+            result[0][0].append(m1[i][j] + m2[i][j])
 
     return result
     # except ValueError:

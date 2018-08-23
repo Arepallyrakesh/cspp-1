@@ -47,13 +47,13 @@ def add_matrix(m1, m2):
     # #     print("Matrix shapes invalid for add")
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
     # print(m1, m2)
-    add = []
+    add_ = []
     for i in range(len(m1)):
         for j in range(len(m1[0])):
-            add = re_mat(len(m1), len(m1[0]))
+            add_ = re_mat(len(m1), len(m1[0]))
             # print(add)
-            add.append(m1[i][j] + m2[i][j])
-    return add
+            add_ = add_ + m1[i][j] + m2[i][j]
+    return add_
     # else:
     #     print("Error: Matrix shapes invalid for addition")
     #     return None

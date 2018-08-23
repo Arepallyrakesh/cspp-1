@@ -19,7 +19,7 @@ def mult_matrix(m1, m2):
     # return result
 def re_mat(rows, colums):
     add_matrix = [[0] * colums] * rows
-    print(add_matrix)
+    
     return add_matrix
 
 

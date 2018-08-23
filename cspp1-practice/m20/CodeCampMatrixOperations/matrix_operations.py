@@ -31,7 +31,7 @@ def add_matrix(m1, m2):
         if len(m1) == len(m2):
             result = [[0,0,0], [0,0,0], [0,0,0]]
             for i in range(len(m1)):
-                for j in range(len(m1[0])):
+                for j in range(len(m1[0] - 1)):
                     result[i][j] = m1[i][j] + m2[i][j]
             return result
     except ValueError:

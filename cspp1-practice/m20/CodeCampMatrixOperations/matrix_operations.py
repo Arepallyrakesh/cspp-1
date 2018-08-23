@@ -51,7 +51,7 @@ def add_matrix(m1, m2):
         for j in range(len(m1[0])):
             add = re_mat(len(m1), len(m1[0]))
             # print(add)
-            add = m1[i][j] + m2[i][j]
+            add =add + m1[i][j] + m2[i][j]
     return add
     # else:
     #     print("Error: Matrix shapes invalid for addition")

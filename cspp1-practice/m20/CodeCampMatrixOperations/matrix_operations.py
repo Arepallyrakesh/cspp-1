@@ -18,7 +18,7 @@ def mult_matrix(m1, m2):
     #     # result1.append(result1)
     # return result
 def re_mat(rows, colums):
-    add_matrix = [[0] * colums] * rows
+    add_matrix = [[0 for i in range(colums)] for j in range(rows)]
     
     return add_matrix
 

@@ -14,8 +14,8 @@ def mult_matrix(m1, m2):
             result = []
             for k in range(len(m2)):
                 result.append(m1[i][k] * m2[k][j])
-        result1.append(result)
-    resut2.append(result1)
+            result1.append(result)
+        resut2.append(result1)
     return result2
   
 

@@ -6,12 +6,14 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    result = [[0,0,0], [0,0,0], [0,0,0]]
-
+     
+    result1 = []
     for i in range(len(m1)):
+        result = []
         for j in range(len(m2[0])):
             for k in range(len(m2)):
-                result[i][j] += m1[i][k] * m2[k][j]
+                result.append(m1[i][k] * m2[k][j])
+        result1.append(result)
     return result
   
 

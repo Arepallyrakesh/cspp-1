@@ -47,7 +47,7 @@ def add_matrix(m1, m2):
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
     for i in range(rows):
         for j in range(columns):
-            add = re_mat(rows, columns)
+            add = re_mat(read_matrix(rows, columns))
             print(add)
             add = m1[i][j] + m2[i][j]
     return add

@@ -1,7 +1,7 @@
 '''
 @author: Arepallyrakesh
 '''
-def mult_matrix(m_1,m_2):
+def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -30,14 +30,14 @@ def mult_matrix(m_1,m_2):
     print("Error: Matrix shapes invalid for mult")
     return None
 
-def re_mat(rows,colums):
-    '''
+def re_mat(rows, colums):
+    ''' 
     empty matrix
     '''
     add_matrix = [[0 for i in range(colums)] for j in range(rows)]
     return add_matrix
 
-def add_matrix(m_1,m_2):
+def add_matrix(m_1, m_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -103,7 +103,7 @@ def main():
     read the matrix
     '''
     # read matrix 1
-    m_1  = read_matrix()
+    m_1 = read_matrix()
     if m_1   is None:
         exit()
 

@@ -19,6 +19,7 @@ def mult_matrix(m1, m2):
     # return result
 def re_mat(rows, colums):
     add_matrix = [[0] * colums] * rows
+    print(add_matrix)
     return add_matrix
 
 
@@ -45,9 +46,10 @@ def add_matrix(m1, m2):
     # # except ValueError:
     # #     print("Matrix shapes invalid for add")
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
+    print(m1, m2)
     for i in range(rows):
         for j in range(columns):
-            add = re_mat(read_matrix(rows, columns))
+            add = re_mat(rows, columns)
             print(add)
             add = m1[i][j] + m2[i][j]
     return add

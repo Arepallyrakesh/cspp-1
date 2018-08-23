@@ -106,7 +106,7 @@ def read_matrix():
             matrix.append([int(i) for i in list_mat_row])
             # print(matrix)
         else:
-            print("error: invalid input")
+            print("Error: Invalid input for the matrix")
             return None
     return matrix
 def main():

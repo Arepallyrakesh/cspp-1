@@ -45,9 +45,10 @@ def add_matrix(m1, m2):
     # # except ValueError:
     # #     print("Matrix shapes invalid for add")
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-    for i in range(len(m1)):
-        for j in range(len(m1[0])):
-            add = re_mat(len(m1), len(m1[0]))
+    for i in range(rows):
+        for j in range(columns):
+            add = re_mat(rows, columns)
+            print(add)
             add = m1[i][j] + m2[i][j]
     return add
     # else:

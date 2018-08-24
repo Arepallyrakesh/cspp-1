@@ -12,8 +12,9 @@ def is_validation(m1):
                 print("Invalid input") 
     if (count(m1,x) > 5) or (count(m1,o) >= 5):
         print("Invalid input")
-    elif count(m1,x) = count(m1,o):
-        print("Invalid input")
+    else:
+        if count(m1,x) = count(m1,o):
+            print("Invalid input")
 
 
 def read_input():

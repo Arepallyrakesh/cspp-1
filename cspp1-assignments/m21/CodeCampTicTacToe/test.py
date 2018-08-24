@@ -1,7 +1,7 @@
 def read_input():
     '''
-    input reading
-    '''
+    input reading
+    '''
     tic_tac_toe_list = []
     for _ in range(3):
         list_matrix_rows = input().strip().split()
@@ -9,18 +9,18 @@ def read_input():
     return list_matrix_rows
 
 def is_valid_input(matrix):
-        '''
-    checking whether input is valid or not
-    '''
+    '''
+    checking whether input is valid or not
+    '''
     for row in matrix:
         for element in row:
             if element not in 'xo.':
                 return False
     return True
 def is_valid_game(matrix):
-        '''
-    checking the game rules
-    '''
+    '''
+    checking the game rules
+    '''
     x_count = 0
     o_count = 0
     for row in matrix:
@@ -31,16 +31,16 @@ def is_valid_game(matrix):
     return True
 def check_rows_columns(matrix, check_var):
     '''
-    checking rows and columns
-    '''
+    checking rows and columns
+    '''
     for row in matrix:
         if len(set(row) == 1 and row[0] == check_var):
             return False
     return True
 def new_transpose_matrix(matrix, increment, temp_matrix):
     '''
-    transpose of matrix
-    '''
+    transpose of matrix
+    '''
     if increment == len(matrix):
         return temp_matrix
     else:
@@ -49,8 +49,8 @@ def new_transpose_matrix(matrix, increment, temp_matrix):
 
 def decide_winner(matrix, winner_var):
     '''
-    deciding winner
-    '''
+    deciding winner
+    '''
     transpose_matrix = new_transpose_matrix(matrix, 0, [])
     if is_valid_game(matrix, winner_var) or is_valid_game(transpose_matrix, winner_var):
         return True
@@ -59,9 +59,9 @@ def decide_winner(matrix, winner_var):
     else:
         return False
 def main():
-        '''
-    main function
-    '''
+    '''
+    main function
+    '''
     tic_tac_toe_list = read_input()
     if is_valid_input(tic_tac_toe_list):
         if is_valid_game(tic_tac_toe_list):

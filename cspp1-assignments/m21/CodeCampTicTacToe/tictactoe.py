@@ -21,7 +21,7 @@ def is_validation(m1):
         return "invalid game"
         exit()
     
-            
+    return m1        
              
     
 # def string1(m1):

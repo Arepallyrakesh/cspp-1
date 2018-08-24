@@ -10,7 +10,7 @@ def is_validation(m1):
         for j in i:
             if j not  in 'xo.':
               return ("Invalid input") 
-    if (count_mat(m1,x) > 5) or (count_mat(m1,o) >= 5) or count_mat(m1,x) = count_mat(m1,o):
+    if (count_mat(m1,x) >= 5) or (count_mat(m1,o) >= 5) or count_mat(m1,x) == count_mat(m1,o):
        return ("Invalid input")
     
 

@@ -1,9 +1,9 @@
 # def is_validation(m1):
-def count(m1):
-    # sum1 = []
-    # for word in m1:
-    #     sum1.append(word.count(word))
-    # return sum1
+def count(m1, cnt):
+    sum1 = []
+    for word in m1:
+        sum1.append(word.count(cnt))
+    return sum(sum1)
 
 def is_validation(m1):
     for i in m1:

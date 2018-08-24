@@ -1,5 +1,5 @@
 # def is_validation(m1):
-def count(m1, cnt):
+def count_mat(m1, cnt):
     sum1 = []
     for word in m1:
         sum1.append(word.count(cnt))
@@ -10,24 +10,13 @@ def is_validation(m1):
         for j in i:
             if j in 'xo.':
               print("Invalid input") 
-    if (count(m1,x) > 5) or (count(m1,o) >= 5) or count(m1,x) = count(m1,o):
-      print("Invalid input")
+    if (count_mat(m1,x) > 5) or (count_mat(m1,o) >= 5) or count_mat(m1,x) = count_mat(m1,o):
+        print("Invalid input")
     
 
 
 def read_input():
     matrix = []
-    # list_input = input().split(" ")
-    # rows, columns = list_input[0], list_input[1]
-    # print(list_input[1])
-    # for _ in range(rows):
-    #     if columns == rows:
-    #         matrix.append([int(i) for i in list_mat_row])
-    #         # print(matrix)
-    #     else:
-    #         print("Error: Invalid input")
-    #         return None
-    # return matrix
     for i in range(3):
         list_input = input().split(" ")
         matrix.append(list_input)

@@ -18,7 +18,7 @@ def is_validation(m_1):
             if j not  in 'xo.':
                 print("invalid input")
                 return False
-    if (count_mat(m_1, 'x') == 4 and count_mat(m_1, 'o') ==5)  or \
+    if (count_mat(m_1, 'x') == 4 and count_mat(m_1, 'o') == 5)  or \
      (count_mat(m_1, 'x') == 5 and count_mat(m_1, 'o') == 4):
         print("draw")
         return False
@@ -47,8 +47,7 @@ def result_int(m_1):
         return m_1[0][2]
     elif m_1[2][0] == m_1[1][1] == m_1[0][2]:
         return m_1[2][0]
-    else:
-        return ("invalid input")
+    return ("invalid input")
 def read_input():
     '''
     read the input

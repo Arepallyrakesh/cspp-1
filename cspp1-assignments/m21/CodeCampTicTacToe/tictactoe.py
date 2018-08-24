@@ -18,6 +18,7 @@ def is_validation(m1):
             for j in i:
                 if j not  in 'xo.':
                     return "invalid game"
+                    exit()
     
             
              

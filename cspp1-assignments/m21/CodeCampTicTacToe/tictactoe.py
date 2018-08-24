@@ -20,7 +20,9 @@ def is_validation(m1):
         print("invalid game")
         return False
     return True
-             
+    if (count_mat(m1, 'x') == 4 and count_mat(m1, 'o') ==5)  or (count_mat(m1, 'x') == 5 and count_mat(m1, 'o') == 4):
+        return "draw"
+
 # def is_draw()
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))

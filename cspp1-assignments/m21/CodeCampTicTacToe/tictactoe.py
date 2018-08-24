@@ -62,6 +62,6 @@ def read_input():
 
 def main():
     m1 = read_input()
-    print(result_int(is_validation(cnt)))
+    print(result_int(is_validation()))
 
 main()

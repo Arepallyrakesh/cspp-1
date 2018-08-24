@@ -14,14 +14,18 @@ def is_validation(m1):
     for i in m1:
         for j in i:
             if j not  in 'xo.':
-                return "invalid game" 
+                return "invalid game"
+            elif j is 'x':
+                return x
+            elif j is '0':
+                return o  
     if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
         return "invalid game"
     
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))
 def result_int(m1, cnt):
-    for i in m1:
+    # for cnt in m1:
         if cnt == m1[0][0] == m1[1][1] == m1[0][1]:
             return cnt
             exit()
@@ -49,7 +53,7 @@ def result_int(m1, cnt):
             exit()
 def read_input():
     matrix = []
-    cnt = 'x' and 'o' 
+    
     for i in range(3):
         list_input = input().split(" ")
         matrix.append(list_input)
@@ -58,7 +62,6 @@ def read_input():
 
 def main():
     m1 = read_input()
-    cnt = read_input()
-    print(result_int(is_validation(m1, cnt)))
+    print(result_int(is_validation(cnt)))
 
 main()

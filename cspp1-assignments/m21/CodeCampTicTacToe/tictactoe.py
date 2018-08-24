@@ -33,7 +33,7 @@ def result_int(m1):
 
     elif m1[0][0] == m1[0][1] == m1[0][2]:
 
-        return m1[0][0]
+        return m1[0][1]
             # exit()
     elif m1[1][0] == m1[1][1] == m1[2][1]:
 

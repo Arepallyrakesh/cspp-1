@@ -3,15 +3,15 @@ def count_mat(m1, cnt):
     sum1 = []
     for word in m1:
         sum1.append(word.count(cnt))
-    return sum(sum1)
+    print(sum(sum1))
 
 def is_validation(m1):
     for i in m1:
         for j in i:
             if j not  in 'xo.':
-              return ("Invalid input") 
+              print ("Invalid input") 
     if (count_mat(m1,x) >= 5) or (count_mat(m1,o) >= 5) or count_mat(m1,x) == count_mat(m1,o):
-       return ("Invalid input")
+       print ("Invalid input")
     
 
 

@@ -73,6 +73,6 @@ def read_input():
 
 def main():
     m1 = read_input()
-    print(result_int(m1, is_validation(m1)))
+    print(result_int(is_validation(m1)))
 
 main()

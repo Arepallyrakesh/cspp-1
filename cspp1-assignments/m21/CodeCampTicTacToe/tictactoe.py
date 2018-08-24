@@ -2,7 +2,7 @@
 def count_mat(m1, cnt):
     sum1 = []
     for word in m1:
-        sum1.append(word.count(cnt))
+        sum1.append(m1.count(cnt))
     print(sum(sum1))
 
 def is_validation(m1):

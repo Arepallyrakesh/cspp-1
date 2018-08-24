@@ -1,5 +1,5 @@
 def read_input():
-        '''
+    '''
     input reading
     '''
     tic_tac_toe_list = []

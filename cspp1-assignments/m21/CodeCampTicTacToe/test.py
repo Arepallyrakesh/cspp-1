@@ -42,17 +42,17 @@ def new_transpose_matrix(matrix, increment, temp_matrix):
     transpose of matrix
     '''
     # temp_matrix = []
-    if increment == len(matrix):
+    if increment == len(matrix) - 1:
         return temp_matrix
     else:
         temp_matrix.append([matrix[0][increment], matrix[1][increment], matrix[2][increment]])
-    return new_transpose_matrix(matrix, increment+1, temp_matrix)
+        return new_transpose_matrix(matrix, increment+1, temp_matrix)
 
 def decide_winner(matrix, winner_var):
     '''
     deciding winner
     '''
-    transpose_matrix = new_transpose_matrix(matrix, 1, [])
+    transpose_matrix = new_transpose_matrix(matrix, 0, [])
     if is_valid_game(matrix, winner_var) or is_valid_game(transpose_matrix, winner_var):
         return True
     elif (matrix[0][0] == matrix[1][1] == matrix[2][2] == winner_var) or (matrix[0][2] == matrix[1][1] == matrix[2][0] == winner_var):

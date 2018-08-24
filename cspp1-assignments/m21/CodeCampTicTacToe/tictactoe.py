@@ -57,7 +57,7 @@ def read_input():
     for i in range(3):
         list_input = input().split(" ")
         matrix.append(list_input)
-    return matrix, cnt
+    return matrix
 
 
 def main():

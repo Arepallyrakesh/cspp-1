@@ -17,8 +17,8 @@ def is_validation(m1):
                 return "invalid game"
             
              
-    # if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
-    #     return "invalid game"
+    if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
+        return "invalid game"
     
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))
@@ -60,6 +60,6 @@ def read_input():
 
 def main():
     m1 = read_input()
-    print( is_validation(m1))
+    print(is_validation(m1))
 
 main()

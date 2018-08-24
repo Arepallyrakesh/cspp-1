@@ -16,12 +16,12 @@ def is_validation(m1):
             if j not  in 'xo.':
                 print("invalid input")
                 return False
-    if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
+    if (count_mat(m1, 'x') > 5) or (count_mat(m1, 'o') > 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
         print("invalid game")
         return False
     return True
              
-    
+# def is_draw()
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))
 def result_int(m1):

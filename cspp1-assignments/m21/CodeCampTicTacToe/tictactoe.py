@@ -10,18 +10,19 @@ def count_mat(m1, cnt):
     return count1
 
 
-def is_validation(m1):  
-    for i in m1:
-        for j in i:
-            if j not  in 'xo.':
-                return "invalid game"
-                
-    
-    if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
-        return "invalid game"
+def is_validation(m1):
+    if m1 == True:  
+        for i in m1:
+            for j in i:
+                if j not  in 'xo.':
+                    return "invalid game"
+                    
         
+        if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
+            return "invalid game"
+    else:       
     
-    return m1        
+        return m1        
              
     
 # def string1(m1):

@@ -26,7 +26,7 @@ def is_validation(m1):
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))
 def result_int(m1, cnt):
-    # for cnt in m1:
+    for cnt in m1:
         if cnt == m1[0][0] == m1[1][1] == m1[0][1]:
             print(cnt)
             # return cnt
@@ -59,7 +59,7 @@ def result_int(m1, cnt):
         elif cnt == m1[2][0] == m1[1][1] == m1[0][2]:
             print(cnt)
 
-        return cnt
+    return cnt
             # exit()
 def read_input():
     matrix = []

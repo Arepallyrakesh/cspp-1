@@ -17,6 +17,7 @@ def is_validation(m1):
         for i in m1:
             for j in i:
                 if j not  in 'xo.':
+                    return "invalid game"
     
             
              
@@ -55,7 +56,7 @@ def result_int(m1):
         return m1[0][2]
             # exit()
     elif m1[2][0] == m1[1][1] == m1[0][2]:
-        return m1[2][0]
+            return m1[2][0]
 
     
             # exit()

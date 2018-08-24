@@ -6,7 +6,7 @@ def read_input():
     for _ in range(3):
         list_matrix_rows = input().strip().split()
         tic_tac_toe_list.append(list_matrix_rows)
-    return list_matrix_rows
+    return tic_tac_toe_list
 
 def is_valid_input(matrix):
     '''
@@ -26,7 +26,7 @@ def is_valid_game(matrix):
     for row in matrix:
         x_count += row.count('x')
         o_count += row.count('o')
-        if o_count > 5 or x_count > 5:
+        if o_count > 5 or x_count > 5 or x_count == o_count:
             return False
     return True
 def check_rows_columns(matrix, check_var):
@@ -34,9 +34,9 @@ def check_rows_columns(matrix, check_var):
     checking rows and columns
     '''
     for row in matrix:
-        if len(set(row) == 1 and row[0] == check_var):
-            return False
-    return True
+        if len(set(row)) == 1 and row[0] == check_var:
+            return True
+    return False
 def new_transpose_matrix(matrix, increment, temp_matrix):
     '''
     transpose of matrix
@@ -47,15 +47,16 @@ def new_transpose_matrix(matrix, increment, temp_matrix):
     else:
         temp_matrix.append([matrix[0][increment], matrix[1][increment], matrix[2][increment]])
         return new_transpose_matrix(matrix, increment+1, temp_matrix)
-
 def decide_winner(matrix, winner_var):
     '''
     deciding winner
     '''
     transpose_matrix = new_transpose_matrix(matrix, 0, [])
-    if is_valid_game(matrix, winner_var) or is_valid_game(transpose_matrix, winner_var):
+    if check_rows_columns(matrix, winner_var) or\
+        check_rows_columns(transpose_matrix, winner_var):
         return True
-    elif (matrix[0][0] == matrix[1][1] == matrix[2][2] == winner_var) or (matrix[0][2] == matrix[1][1] == matrix[2][0] == winner_var):
+    elif (matrix[0][0] == matrix[1][1] == matrix[2][2] == winner_var) or\
+        (matrix[0][2] == matrix[1][1] == matrix[2][0] == winner_var):
         return True
     else:
         return False
@@ -73,5 +74,7 @@ def main():
             else:
                 print('draw')
         else:
-            print("invalid input")
+            print("invalid game")
+    else:
+        print("invalid input")
 main()

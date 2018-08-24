@@ -19,8 +19,8 @@ def is_validation(m1):
             #     return 'x'
             # elif j is 'o':
             #     return 'o
-            if j in 'xo':
-                return j 
+            if j in 'o':
+                return 'o' 
              
     # if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
     #     return "invalid game"

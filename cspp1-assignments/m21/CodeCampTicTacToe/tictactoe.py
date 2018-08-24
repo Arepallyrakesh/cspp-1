@@ -9,9 +9,9 @@ def is_validation(m1):
     for i in m1:
         for j in i:
             if j in 'xo.':
-                print("Invalid input") 
+              print("Invalid input") 
     if (count(m1,x) > 5) or (count(m1,o) >= 5) or count(m1,x) = count(m1,o):
-        print("Invalid input")
+      print("Invalid input")
     
 
 

@@ -21,11 +21,16 @@ def is_valid_rules(matrix):
         return False
     return True
 
-def decide_winner(matrix, variable):
-    for row in matrix:
+def check_valid_rules(matrix):
+    for index_row,row in enumerate(matrix):
         if len(set(row)) == 1 and row[0] == variable:
             return True
-    return False
+            for index_col, element in enumerate(row):
+
+
+def decide_winner(matrix, variable):
+    # for row in matrix:
+    # return False
 
 def main():
     matrix = take_input()

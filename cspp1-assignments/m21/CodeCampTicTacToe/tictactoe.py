@@ -4,7 +4,10 @@ def count_mat(m1, cnt):
     # for word in m1:
     #     sum1.append(word.count(cnt))
     # print(sum(sum1))
-    sum1 = []
+    count1 = 0
+    for word in m1:
+        count1 += word.count(cnt)
+    return count1
 
 
 def is_validation(m1):
@@ -15,8 +18,8 @@ def is_validation(m1):
     if (count_mat(m1,x) >= 5) or (count_mat(m1,o) >= 5) or count_mat(m1,x) == count_mat(m1,o):
         print ("Invalid input")
     
-def string1(m1):
-    print(list(itertools.chain(*m1)))
+# def string1(m1):
+#     print(list(itertools.chain(*m1)))
 
 
 def read_input():

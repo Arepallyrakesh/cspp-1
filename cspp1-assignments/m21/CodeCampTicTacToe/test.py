@@ -17,8 +17,8 @@
 
 # main()
 m1 = [['1', '1', '2'], ['1', '2', '3'], ['5', '1', '2']]
-cnt = 0
-sum1 = []
-for word in m1:
-    sum1.append(word.count(cnt))
-    print(sum1)
+count = 0
+for i in m1:
+    count += i.count('1')
+print(count)
+

@@ -11,6 +11,11 @@ def count_mat(m1, cnt):
 
 
 def is_validation(m1):  
+    for i in m1:
+        for j in i:
+            if j not  in 'xo.':
+                print("invalid input")
+                return False
     if (count_mat(m1, 'x') > 5) or (count_mat(m1, 'o') > 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
         print("invalid game")
         return False
@@ -19,11 +24,6 @@ def is_validation(m1):
         print("draw")
         return False
     return True
-    for i in m1:
-        for j in i:
-            if j not  in 'xo.':
-                print("invalid input")
-                return False
 
 
 # def is_draw()

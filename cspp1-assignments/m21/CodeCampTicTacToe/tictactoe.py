@@ -54,7 +54,7 @@ def read_input():
     read the input
     '''
     matrix = []
-        for i in range(3):
+    for i in range(3):
         list_input = input().split(" ")
         matrix.append(list_input)
     return matrix

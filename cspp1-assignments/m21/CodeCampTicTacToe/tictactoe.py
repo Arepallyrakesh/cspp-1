@@ -22,8 +22,9 @@ def is_validation(m1):
     return True
     if (count_mat(m1, 'x') == 4 and count_mat(m1, 'o') ==5)  or (count_mat(m1, 'x') == 5 and count_mat(m1, 'o') == 4):
         print("draw")
-        return True
-    
+        return False
+    return True
+
 
 # def is_draw()
 # def string1(m1):

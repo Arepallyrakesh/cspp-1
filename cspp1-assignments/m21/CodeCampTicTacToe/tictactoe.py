@@ -10,19 +10,16 @@ def count_mat(m1, cnt):
     return count1
 
 
-def is_validation(m1):
-    if m1 == True:  
-        for i in m1:
-            for j in i:
-                if j not  in 'xo.':
-                    return "invalid game"
-                    
-        
-        if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
-            return "invalid game"
-    else:       
-    
-        return m1        
+def is_validation(m1):  
+    for i in m1:
+        for j in i:
+            if j not  in 'xo.':
+                print("invalid input")
+                return False
+    if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
+        print("invalid game")
+        return False
+    return True
              
     
 # def string1(m1):
@@ -74,6 +71,7 @@ def read_input():
 
 def main():
     m1 = read_input()
-    print(result_int(is_validation(m1)))
+    if is_validation(m1):
+        print(result_int(m1))
 
 main()

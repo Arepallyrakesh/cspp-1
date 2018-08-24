@@ -1,4 +1,6 @@
-# def is_validation(m1):
+'''
+@author:Arepallyrakesh
+'''
 def count_mat(m1, cnt):
     # sum1 = []
     # for word in m1:
@@ -23,6 +25,7 @@ def is_validation(m1):
     if (count_mat(m1, 'x') == 4 and count_mat(m1, 'o') ==5)  or (count_mat(m1, 'x') == 5 and count_mat(m1, 'o') == 4):
         print("draw")
         return False
+    return True
 
 # def is_draw()
 # def string1(m1):
@@ -32,7 +35,6 @@ def result_int(m1):
     if m1[0][0] == m1[1][1] == m1[2][2]:
 
         return m1[0][0]
-            # exit()
 
     elif m1[0][0] == m1[0][1] == m1[0][2]:
 

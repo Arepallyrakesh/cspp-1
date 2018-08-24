@@ -49,14 +49,16 @@ def result_int(m1, cnt):
             exit()
 def read_input():
     matrix = []
+    cnt = 'x' and 'o' 
     for i in range(3):
         list_input = input().split(" ")
         matrix.append(list_input)
-    return matrix 
+    return matrix, cnt
 
 
 def main():
     m1 = read_input()
+    cnt = read_input()
     print(result_int(is_validation(m1, cnt)))
 
 main()

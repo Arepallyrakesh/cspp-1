@@ -25,37 +25,37 @@ def is_validation(m1):
 #     print(list(itertools.chain(*m1)))
 def result_int(m1):
     # for cnt in m1:
-        if m1[0][0] == m1[1][1] == m1[0][1]:
+    if m1[0][0] == m1[1][1] == m1[0][1]:
 
-            return m1[0][0]
+        return m1[0][0]
             # exit()
 
-        elif m1[0][0] == m1[0][1] == m1[0][2]:
+    elif m1[0][0] == m1[0][1] == m1[0][2]:
 
-            return m1[0][0]
+        return m1[0][0]
             # exit()
-        elif m1[1][0] == m1[1][1] == m1[2][1]:
+    elif m1[1][0] == m1[1][1] == m1[2][1]:
 
-            return m1[1][0]
+        return m1[1][0]
             # exit()
-        elif m1[2][0] == m1[2][1] == m1[2][2]:
+    elif m1[2][0] == m1[2][1] == m1[2][2]:
 
-            return m1[2][0]
+        return m1[2][0]
             # exit()
-        elif m1[0][0] == m1[1][0] == m1[2][0]:
+    elif m1[0][0] == m1[1][0] == m1[2][0]:
 
-            return m1[0][0]
+        return m1[0][0]
             # exit()
-        elif m1[0][1] == m1[1][1] == m1[2][1]:
+    elif m1[0][1] == m1[1][1] == m1[2][1]:
 
-            return m1[0][1]
+        return m1[0][1]
             # exit()
-        elif m1[0][2] == m1[1][2] == m1[2][2]:
+    elif m1[0][2] == m1[1][2] == m1[2][2]:
 
-            return m1[0][2]
+        return m1[0][2]
             # exit()
-        elif m1[2][0] == m1[1][1] == m1[0][2]:
-            return m1[2][0]
+    elif m1[2][0] == m1[1][1] == m1[0][2]:
+        return m1[2][0]
 
     
             # exit()

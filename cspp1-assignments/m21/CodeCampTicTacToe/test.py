@@ -16,9 +16,19 @@
 #     print(m1)
 
 # main()
-m1 = [['1', '1', '2'], ['1', '2', '3'], ['5', '1', '2']]
-count = 0
+m1 = [['x', 'x', 'x'], ['x', 'x', 'x'], ['x', 'x', 'x']]
+# count = 0
+# for i in m1:
+#     count += i.count('1')
+# print(count)
 for i in m1:
-    count += i.count('1')
-print(count)
-
+    for j in i:
+        if j not  in 'xo.':
+           print("invalid game")
+        
+print(m1)
+# if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
+#         print("invalid game")
+# else:
+#     return m1
+            

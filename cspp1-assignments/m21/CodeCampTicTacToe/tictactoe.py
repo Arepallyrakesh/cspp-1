@@ -18,7 +18,7 @@ def is_validation(m1):
                 exit()
     if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
         return "invalid game"
-            exit()
+        exit()
     else:
         return m1
             

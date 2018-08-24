@@ -26,7 +26,7 @@ def is_validation(m1):
     
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))
-def result_int(m1, cnt):
+def result_int(m1):
     # for cnt in m1:
         if m1[0][0] == m1[1][1] == m1[0][1]:
 

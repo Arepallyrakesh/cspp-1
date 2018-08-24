@@ -18,11 +18,13 @@ def is_validation(m1):
             # elif j is 'x':
             #     return 'x'
             # elif j is 'o':
-            #     return 'o'
+            #     return 'o
             if j is 'x':
-                return'x'  
-    if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
-        return "invalid game"
+                return'x' 
+            if j is 'o':
+                return 'o' 
+    # if (count_mat(m1, 'x') >= 5) or (count_mat(m1, 'o') >= 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
+    #     return "invalid game"
     
 # def string1(m1):
 #     print(list(itertools.chain(*m1)))

@@ -42,7 +42,7 @@ def new_transpose_matrix(matrix, increment, temp_matrix):
     transpose of matrix
     '''
     # temp_matrix = []
-    if increment == len(matrix) - 1:
+    if increment == len(matrix):
         return temp_matrix
     else:
         temp_matrix.append([matrix[0][increment], matrix[1][increment], matrix[2][increment]])

@@ -59,7 +59,8 @@ def result_int(m1):
             # exit()
     elif m1[2][0] == m1[1][1] == m1[0][2]:
         return m1[2][0]
-
+    else:
+        return ("invalid input")
     
             # exit()
 def read_input():

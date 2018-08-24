@@ -3,18 +3,16 @@ def count(m1, cnt):
     sum1 = []
     for word in m1:
         sum1.append(word.count(cnt))
-    return sum(sum1)
+    print(sum(sum1)) 
 
 def is_validation(m1):
     for i in m1:
         for j in i:
               if j in 'xo.':
                 print("Invalid input") 
-    if (count(m1,x) > 5) or (count(m1,o) >= 5):
+    if (count(m1,x) > 5) or (count(m1,o) >= 5) or count(m1,x) = count(m1,o):
         print("Invalid input")
-    else:
-        if count(m1,x) = count(m1,o):
-            print("Invalid input")
+    
 
 
 def read_input():

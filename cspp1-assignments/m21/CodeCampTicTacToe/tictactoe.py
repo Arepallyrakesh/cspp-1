@@ -57,6 +57,6 @@ def read_input():
 
 def main():
     m1 = read_input()
-    print(result_int(m1, x))
+    print(result_int(m1, cnt = 'x'))
 
 main()

@@ -18,13 +18,13 @@ def is_validation(m1):
             if j not  in 'xo.':
                 print("invalid input")
                 return False
+    if (count_mat(m1, 'x') == 4 and count_mat(m1, 'o') ==5)  or (count_mat(m1, 'x') == 5 and count_mat(m1, 'o') == 4):
+        print("draw")
+        return False
     if (count_mat(m1, 'x') > 5) or (count_mat(m1, 'o') > 5) or count_mat(m1, 'x') == count_mat(m1, 'o'):
         print("invalid game")
         return False
     return True
-    if (count_mat(m1, 'x') == 4 and count_mat(m1, 'o') ==5)  or (count_mat(m1, 'x') == 5 and count_mat(m1, 'o') == 4):
-        print("draw")
-        return False
 
 
 # def is_draw()

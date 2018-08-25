@@ -6,17 +6,6 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-     
-    # result2 = []
-    
-    # result = [[0 for row in range(len(m1))] for col in range(len(m2[0]))]
-    # for i in range(len(m1)):
-    #     for j in range(len(m2[0])):
-    #         for k in range(len(m2)):
-    #             result[i][j] += m1[i][k] * m2[k][j]
-    #         # result1.append(result)
-    #     # result1.append(result1)
-    # return result
     add_ = re_mat(len(m1), len(m1[0])) 
     if len(m1[0]) == len(m2):
         for i in range(len(m1)):
@@ -28,18 +17,10 @@ def mult_matrix(m1, m2):
         print("Error: Matrix shapes invalid for mult")
         return None
 
-
-
-
-
-
 def re_mat(rows, colums):
     add_matrix = [[0 for i in range(colums)] for j in range(rows)]
     
     return add_matrix
-
-
-
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -49,23 +30,6 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     
-    # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-    #     result1 = []
-    #     for i in range(len(m1)):
-    #         result = []
-    #         for j in range(len(m1[0])):
-    #             result.append(m1[i][j] + m2[i][j])
-    #             # result1.append(list(map(int,  )))
-    #         result1.append(result)
-                
-    #     return result1
-    # # except ValueError:
-    # #     print("Matrix shapes invalid for add")
-    # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-    # print(m1, m2)
-    # add_ = []
- 
-    # print(m1, m2)
     add_ = re_mat(len(m1), len(m1[0])) 
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
         for i in range(len(m1)):
@@ -76,11 +40,6 @@ def add_matrix(m1, m2):
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
-
-
-
-
-
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -89,14 +48,6 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    # mat = input().split(",")
-    # row_size = int(mat[0])
-    # column_size = int(mat[1])
-    # matrix = []
-    # for i in range(row_size):
-    #     matrix.append(list(map(int, input().rstrip().split(" "))))
-
-    # return matrix
     matrix = []
     list_input = input().split(",")
     rows, columns = int(list_input[0]), int(list_input[1])
@@ -129,3 +80,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+# matrix = [[1,2][3.4][5,6]]
+# zip(*matrix)

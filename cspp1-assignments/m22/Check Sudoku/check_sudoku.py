@@ -47,23 +47,3 @@ if __name__ == '__main__':
     main()
 
 
-# def rows(sudoku):
-#     """checks for valid rows"""
-#     for i in sudoku:
-#         if len(set(i)) != 9:
-#             return False
-#     return True
-# def coloumn(matrix):
-#     """checks for valid coloumn"""
-#     transpose = []
-#     for i in range(len(matrix)):
-#         row = []
-#         for j in range(len(matrix[0])):
-#             row.append(matrix[j][i])
-#         transpose.append(row)
-#         i += 1
-#     return rows(transpose)
-
-# def check_sudoku(sudoku):
-#    
-#     return rows(sudoku) and coloumn(sudoku)

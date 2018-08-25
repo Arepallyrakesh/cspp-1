@@ -6,7 +6,7 @@ import re
 def clean_string(string):
 	
     regex = re.compile('[^a-z0-9]+')
-    words = regex.sub(" ", string)
+    words = regex.sub("", string)
     return words
 
 def main():

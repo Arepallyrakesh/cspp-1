@@ -16,10 +16,10 @@ def check_sudoku(sudoku):
     for i in sudoku:
         if len(set(i)) == 9:
             transpose = []
-        for i in range(len(matrix)):
+        for i in range(len(sudoku)):
             row = []
-            for j in range(len(matrix[0])):
-                row.append(matrix[j][i])
+            for j in range(len(sudoku[0])):
+                row.append(sudoku[j][i])
                 transpose.append(row)
                 i += 1
     return transpose

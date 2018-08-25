@@ -6,7 +6,7 @@ each word
 import re
 def tokenize(string, input1):
     regex = re.compile('[^a-z0-9]+')
-    string = regex.sub("", string).split()
+    string = regex.sub(" ", string).split()
     counts = {}
     words = string
     for word in words:

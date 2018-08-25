@@ -9,7 +9,7 @@ def tokenize(string, input1):
     for _ in range(input1):
         input_str = input()
         list1.append(input_str)
-        text = '\n'.join(list1).split()
+        text = '\n'.join(list1)
         for word in text:
             if word in counts:
                 counts[word] += 1

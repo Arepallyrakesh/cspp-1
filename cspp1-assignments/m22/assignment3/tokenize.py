@@ -19,7 +19,7 @@ def main():
     input1 = int(input())
     input_str = input()
     text = ''.join(input_str)
-    print(text)
+    text.split()
     print(tokenize(text, input1))
 if __name__ == '__main__':
     main()

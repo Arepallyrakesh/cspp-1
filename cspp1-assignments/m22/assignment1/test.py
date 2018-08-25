@@ -37,3 +37,15 @@ print( word_count('the quick brown fox jumps over the lazy dog.'))
 for each wor in string:
 	if eashwor in string:
 		mydict
+
+#  keys = sorted(dictionary.keys())
+#     for key in keys:
+#         temp = ""
+#         for i in range(dictionary[key]):
+#             temp += "#"
+#             i += 1
+#         print(key, "-", temp)
+# def main():
+#     """main"""
+#     dictionary = eval(input())
+#     frequency_graph(dictionary)

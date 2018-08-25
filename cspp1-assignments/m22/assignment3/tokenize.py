@@ -3,20 +3,15 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 
-# def tokenize(string, input1):
-    # list1 = []
-    # counts = dict()
-    # for _ in range(input1):
-    #     input_str = input()
-    #     list1.append(input_str)
-    #     text = '\n'.join(list1)
-    #     for word in text:
-    #         if word in counts:
-    #             counts[word] += 1
-    #         else:
-    #             counts[word] = 1
+def tokenize(string, input1):
+    counts = {}
+    for word in string:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
 
-    # return counts
+    return counts
     
             
 def main():
@@ -24,7 +19,7 @@ def main():
     input_str = input()
     text = ''.join(input_str)
     print(text)
-    # print(tokenize(input_str, input1))
+    print(tokenize(text, input1))
 if __name__ == '__main__':
     main()
 

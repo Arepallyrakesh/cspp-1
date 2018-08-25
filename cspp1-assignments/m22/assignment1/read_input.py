@@ -3,10 +3,12 @@ Write a python program to read multiple lines of text input and store the input 
 '''
 def read_input():
 	input1 = int(input())
-	out_str = ""
-	input_str = input().split()
-	out_str += input_str
-	return out_str 
+	list1 = []
+	for i in range(input1):
+		input_str = input()
+		list1.append(input_str)
+		text = '\n'.join(list1)
+	return text 
 
 
 def main():

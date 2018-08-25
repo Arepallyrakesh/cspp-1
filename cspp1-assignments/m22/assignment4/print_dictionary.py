@@ -5,22 +5,19 @@ the key and frequency with a SPACE - SPACE.
 '''
 
 def print_dictionary(dictionary):
+    '''
+    print keys of dictionary
+    '''
     keys_dic = sorted(dictionary.keys())
     for values in keys_dic:
         print(values, '-', dictionary[values])
 
 def main():
+    '''
+    main function
+    '''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
 if __name__ == '__main__':
     main()
-
-# for keys,values in cars.items():
-#     print(keys)
-#     print(values)
-
-# for x in cars:
-#     print (x)
-#     for y in cars[x]:
-#         print (y,':',cars[x][y])

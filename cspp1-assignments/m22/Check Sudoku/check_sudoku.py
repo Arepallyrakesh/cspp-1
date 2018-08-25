@@ -13,16 +13,16 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    transpose = []
+    list1 = []
     for i in sudoku:
         if len(set(i)) == 9:
         for i in range(len(sudoku)):
             row = []
             for j in range(len(sudoku[0])):
                 row.append(sudoku[j][i])
-                transpose.append(row)
+                list1.append(row)
                 i += 1
-    return transpose
+    return list1
 
 
 

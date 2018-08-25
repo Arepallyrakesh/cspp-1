@@ -4,26 +4,31 @@
 #     words = regex.sub(" ", words).split(" ")
 #     return words
 
-no_of_lines = 5
-lines = ""
-for i in range(5):
-    lines += input() + "\n"
+# import re
+# import string
+# frequency = {}
+# document_text = open('test.txt', 'r')
+# text_string = document_text.read().lower()
+# match_pattern = re.findall(r'\b[a-z]{3,15}\b', text_string)
+ 
+# for word in match_pattern:
+#     count = frequency.get(word,0)
+#     frequency[word] = count + 1
+     
+# frequency_list = frequency.keys()
+ 
+# for words in frequency_list:
+#     print words, frequency[words]
+def word_count(str):
+    counts = dict()
+    words = str.split()
 
-print (lines)
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
 
-	input1 = int(input())
-	out_str = ""
-	for i in range(input1):
-		input_str = str(intput())
-		out_str += input_str + "\n"
-	return out_str
-	
+    return counts
 
-	lines = []
-while True:
-    line = input()
-    if line:
-        lines.append(line)
-    else:
-        break
-text = '\n'.join(lines)
+print( word_count('the quick brown fox jumps over the lazy dog.'))

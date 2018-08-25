@@ -30,8 +30,6 @@ def check_sudoku(sudoku):
     '''
     return row_sudoku(sudoku) and col_sudoku(sudoku)
 
-
-
 def main():
     '''
         main function to read input sudoku from console
@@ -51,5 +49,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-

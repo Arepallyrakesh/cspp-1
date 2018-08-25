@@ -13,9 +13,9 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
+    transpose = []
     for i in sudoku:
         if len(set(i)) == 9:
-            transpose = []
         for i in range(len(sudoku)):
             row = []
             for j in range(len(sudoku[0])):

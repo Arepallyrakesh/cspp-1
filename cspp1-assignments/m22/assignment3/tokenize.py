@@ -6,9 +6,9 @@ each word
 import re
 def tokenize(string, input1):
     regex = re.compile('[^a-z0-9]+')
-    string = regex.sub(" ", string).split()
+    string = regex.sub(" ", string)
     counts = {}
-    words = string
+    words = string.split()
     for word in words:
         if word in counts:
             counts[word] += 1

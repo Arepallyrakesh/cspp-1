@@ -8,12 +8,17 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def row_sudoku(sudoku):
+    '''
+    row in sudoku
+    '''
     for value in sudoku:
         if len(set(value)) != 9:
             return False
     return True
 def col_sudoku(sudoku):
-    """checks for valid coloumn"""
+    '''
+    checks for valid coloumn
+    '''
     list1 = []
     for value in range(len(sudoku)):
         row = []

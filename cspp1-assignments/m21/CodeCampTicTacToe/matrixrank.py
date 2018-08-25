@@ -1,4 +1,4 @@
-
+	
 def swapRows(a,row1,row2):
 	a[row2],a[row1]=a[row1],a[row2]
 	return a
@@ -48,3 +48,4 @@ def MatrixRank(a):
 				count2+=1
 
 		return (rank-count2)
+MatrixRank()

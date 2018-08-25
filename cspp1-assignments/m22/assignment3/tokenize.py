@@ -3,7 +3,7 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 
-def tokenize(string, input1):
+# def tokenize(string, input1):
     # list1 = []
     # counts = dict()
     # for _ in range(input1):

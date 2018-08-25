@@ -5,6 +5,7 @@ each word
 
 def tokenize(string, input1):
     counts = {}
+    string.split()
     for word in string:
         if word in counts:
             counts[word] += 1

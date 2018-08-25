@@ -11,8 +11,11 @@ def read_input():
         input_str = input()
         list1.append(input_str)
         text = '\n'.join(list1)
-    return text 
+    return text
 def main():
+    ''''
+    MAIN FUNCTION
+    '''
     print(read_input())
 if __name__ == '__main__':
     main()

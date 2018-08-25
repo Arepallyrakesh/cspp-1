@@ -3,7 +3,10 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 
+import re
 def tokenize(string, input1):
+    regex = re.compile('[^a-z0-9]+')
+    string = regex.sub("", string)
     counts = {}
     words = string.split()
     for word in words:
@@ -14,7 +17,6 @@ def tokenize(string, input1):
 
     return counts
     
-            
 def main():
     input1 = int(input())
     input_str = input()

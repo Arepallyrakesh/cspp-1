@@ -22,7 +22,8 @@ each word
 def main():
     input1 = int(input())
     input_str = input()
-    print(input_str)
+    text = '\n'.join(input_str)
+    print(text)
     # print(tokenize(input_str, input1))
 if __name__ == '__main__':
     main()

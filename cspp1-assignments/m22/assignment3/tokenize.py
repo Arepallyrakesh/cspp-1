@@ -5,19 +5,24 @@ each word
 
 import re
 def tokenize(string, input1):
+    '''
+    tokenize the string
+    '''
     # regex = re.compile('[^a-z0-9]+')
     # string = regex.sub("", string)
     words = string.split()
-    counts = {}
+    dictionary = {}
     for word in words:
-        if word in counts:
-            counts[word] += 1
+        if word in dictionary:
+            dictionary[word] += 1
         else:
-            counts[word] = 1
+            dictionary[word] = 1
 
-    return counts
-    
+    return dictionary
 def main():
+    '''
+    main function
+    '''
     input1 = int(input())
     input_str = input()
     text = ''.join(input_str)
@@ -25,10 +30,3 @@ def main():
     print(tokenize(text, input1))
 if __name__ == '__main__':
     main()
-
-
-
-# from collections import defaultdict
-# fq= defaultdict( int )
-# for w in words:
-#     fq[w] += 1
